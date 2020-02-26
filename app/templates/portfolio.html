@@ -1,0 +1,18 @@
+<table id = "portfolio">
+    <tr>
+        <th>Repository</th>
+        <th>Owner</th>
+        <th>Languages</th>
+        <th>My / Total commits</th>
+        <th>My / Total lines</th>
+    </tr>
+    {% for repo in repos %}
+    <tr>
+        <td>{{repo.repoName}}</td>
+        <td>{{repo.repoOwner}}</td>
+        <td>{{repo.repoLanguages}}</td>
+        <td>{{repo.repoCommits}} / {{repo.repoTotalCommits}}</td>
+        <td>{{repo.repoAdditions - repo.repoDeletions}} / {{repo.repoTotalAdditions - repo.repoTotalDeletions}}</td>
+    </tr>
+    {% endfor %}
+</table>
