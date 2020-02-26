@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div id = headingBar>
+        <img id = "face" src="{{ url_for('static', filename='img/face.jpg')}}">
+    </div>
     <h1>index</h1>
     {% include "portfolio.html" %}
 {% endblock %}

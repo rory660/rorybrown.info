@@ -1,12 +1,14 @@
 <html>
     <head>
         <title>Rory Brown</title>
-        <link rel="css/master.css" type="stylesheet">
+        <link rel="stylesheet" type="text/css", href="{{ url_for('static', filename='styles/master.css')}}">
     </head>
 
     <body>
-        <div class="nav">Rory Brown</div>
-        <div class = "pageContent">
+        <div id="navbar">Rory Brown</div>
+        <div id = "splash">
+        </div>
+        <div id = "pageContent">
             {% block content %}{% endblock %}
         </div>
     </body>

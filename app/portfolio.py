@@ -34,7 +34,7 @@ LIST_SYMBOLS = [SYMBOL_REPO_OWNER, SYMBOL_REPO_OWNER_URL, SYMBOL_REPO_OWNER_AVAT
 
 HEADERS = {HEADER_OAUTH: SECRET_GITHUB, HEADER_ACCEPT: API_VERSION}
 
-REFETCH_TIMEOUT = 60 * 24 # 1 Day
+REFETCH_TIMEOUT = 60 * 60 * 24 # 1 Day
 USERNAME = "rory660"
 
 class Portfolio:
@@ -76,6 +76,7 @@ class Portfolio:
 			saveFile.write(fileData)
 
 	def generateEntries(self):
+		self.entries = []
 		for repo in self.repos:
 			if not repo["private"]:
 				entry = self.generateEntry(repo)
