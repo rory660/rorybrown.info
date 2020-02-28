@@ -1,95 +1,96 @@
-#portfolio {
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#navbar {
-    background-color: #68A357;
-    padding: 10px;
-    margin: 0px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    box-shadow: 0 2px 10px black;
-    color:white;
-}
-
-#pageContent {
-    background-color: #FFFBBD;
-    position: relative;
-    top: -100px;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    padding-top: 0;
-    border-top: 5px solid #68A357;
-}
-
-#splash {
-    height: 300px;
-    width: 100%;
-    background-image: linear-gradient(0deg, #232020, rgba(255,0,0,0) 300px), url("/static/img/splash.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: left top, center;
-    background-attachment: scroll, fixed;
-    background-size: 150%;
-}
-
-#topSection{
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-#topsection>*{
-    position: relative;
-    top: -250px;
-}
-
-#face {
-    height: 300px;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-
-    border-radius: 50%;
-    border: 5px solid #68A357;
-    box-sizing: border-box;
-    
-}
-
-body {
-    background-color: #232020;
-    padding: 0;
+body{
     margin: 0;
+    padding: 0;
 }
 
-@media screen and (min-width: 768px) {
-    
-    #pageContent {
-        width: 75vw;
-    }
+h1{
+    margin: 0;
+    padding: 20px;
+}
 
-    #topSection{
-        text-align: left;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+.navbar {
+    width: 100%;
+    background-color: hotpink;
+}
 
-    #topsection>h1{
-        position: relative;
-        top: 0;
-        margin-left: 50px;
-    }
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: cyan;
+}
 
-    #topsection>#face{
-        margin-right: 50px;
-        top: -150px;
-    }
+.page {
+    width: 100%;
+    background-color: darkblue;
+}
 
-    #splash{
-        height: 500px;
-    }
+.content {
+    padding: 100px;
+    background-color: orange;
+}
 
+.splash{
+    width: 100%;
+    height:800px auto;
+    background-color: green;
 
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "splashFace"
+        "splashHeading";
+    justify-items: center;
+}
+
+.splash>*{
+    margin: 20px;
+}
+
+.splash>.face{
+    grid-area: splashFace;
+}
+
+.splash>h1{
+    font-weight: 500;
+    grid-area: splashHeading;
+}
+
+.face{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 2px;
+    padding: 5px;
+}
+
+.jobText{
+    font-weight: 800;
+    animation: fastFade 5s infinite;
+}
+
+@keyframes fastFade{
+    0%{color: whitesmoke;}
+    20%{color: whitesmoke;}
+    30%{color: transparent;}
+    40%{color: whitesmoke;}
+    100%{color: whitesmoke;}
+}
+
+.jobText::after{
+    content: "programmer";
+    animation: jobTextChange 20s infinite;
+}
+
+@keyframes jobTextChange{
+    0% {content: "programmer";}
+    25% {content: "tutor";}
+    50% {content: "CS student";}
+    75% {content: ""}
+    100%{content: "programmer";}
 }
