@@ -3,13 +3,18 @@
 {% block content %}
 
 <div class = "splash">
-    <h1>Hi! I'm Rory Brown! I'm a <span class = "jobText"></span></h1>
+    <div class = "tagline">
+        <h1>Hi! I'm Rory Brown! I'm a <span class = "jobText"></span></h1>
+    </div>
     <img class = "face" src="{{ url_for('static', filename='img/face.jpg')}}">
 </div>
 <div class = "content">
-        <h1>index</h1>
+    <div class = "cards">
+        {% include "languages.html" %}
+        {% include "bio.html" %}
+    </div>  
 </div>
 
 
-{% include "portfolio.html" %}
+
 {% endblock %}
