@@ -42,15 +42,49 @@ hr {
 
 .navbar {
     width: 100vw;
+    height: 2vh;
     background-color: #463E84;
     color: white;
     z-index: 100;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "navTitle navButtons";
+    justify-content: space-between;
+
+}
+
+.navButtons {
+    visibility: hidden;
+    grid-area: navButtons;
+}
+
+.navTitle {
+    visibility: hidden;
+    grid-area: navTitle;
 }
 
 .footer {
-    height: 30vh;
+    height: 100%;
     width: 100%;
-    background-color: cyan;
+    background-color: rgb(42, 60, 75);
+    text-align: center;
+}
+
+.footer *{
+    font-size: 1.5rem;
+    color: white;
+    padding-bottom: 10vw;
+    margin: 0;
+}
+
+.socialButtons a{
+    padding: 2vh;
+}
+
+.socialButtons a:hover {
+    background-color: whitesmoke;
+    color: rgb(42, 60, 75);
 }
 
 .page {
@@ -169,6 +203,14 @@ hr {
     right: 0;
 }
 
+.fa {
+    font-size: 5rem;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+
 @keyframes fastFade{
     0%{color: #23F0C7;}
     20%{color: #23F0C7;}
@@ -206,9 +248,47 @@ hr {
         font-size: 2rem;
     }
 
+    .navbar {
+        height: auto;
+        align-items: center;
+    }
+
+    .navbar a{
+        padding: 1vw;
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+        font-size: 3rem;
+        color: white;
+        text-decoration: none;
+        background-color: rgb(62, 54, 117);
+    }
+
+    .navbar a:hover{
+        background-color: whitesmoke;
+        color: #463E84;
+        text-shadow: 0vw 0vw 0.1vw #463E84;
+    }
+
+    .navbar a:active{
+        background-color: rgb(49, 43, 92);
+        color: white;
+    }
+
+    .navButtons {
+        visibility: visible;
+    }
+    
+    .navTitle {
+        visibility: visible;
+    }
+
     .content{
         padding-top: 10vh;
         padding-bottom: 10vh;
+    }
+
+    .socialButtons a{
+        padding: 1vw;
     }
 
     .cards {
@@ -264,6 +344,10 @@ hr {
         color: whitesmoke;
         position: relative;
         left: 2vw;
+    }
+
+    .footer p{
+        font-size: 1.5rem;
     }
     
 }
