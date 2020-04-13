@@ -1,10 +1,71 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body{
+    
+    background-color: rgb(42, 60, 75);
 }
 
-html {
-    font-size: 2vw;
+p{
+    margin: 1vw;
 }
+
+.page{
+    background-color: whitesmoke;
+}
+
+
+
+.splash{
+    width: 100%;
+    background-image: url("../img/splash.png");
+    background-position: 0 0;
+    background-size: 100rem;
+    box-shadow: 
+        inset 0 10vh 10vh -10vh rgb(27, 180, 150),
+        inset 0 -10vh 10vh -10vh rgb(27, 180, 150);
+}
+
+.content{
+    padding: 1vh 0;
+}
+
+.face{
+    width: 10rem;
+    height: 10rem;
+    border-width: 0.2vw;
+    padding: 0.4vw;
+    border: 0.2rem solid whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0.2rem 0.2rem rgba(42, 60, 75, 0.24);
+}
+
+
+
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(42, 60, 75);
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 1vh;
+}
+
+.card {
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    margin: 2vw;
+    box-shadow: 0.2rem 0.2rem rgba(42, 60, 75, 0.062);
+}
+
+.cardTop{
+    color: white;
+    background-color: #463E84;
+    padding: 1rem;
+    margin: 0;
+}
+
+
+/* 
 
 body{
     margin: 0;
@@ -38,30 +99,6 @@ hr {
     border: 0;
     height: 0.2vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-}
-
-.navbar {
-    width: 100vw;
-    height: 2vh;
-    background-color: #463E84;
-    color: white;
-    z-index: 100;
-
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: "navTitle navButtons";
-    justify-content: space-between;
-
-}
-
-.navButtons {
-    visibility: hidden;
-    grid-area: navButtons;
-}
-
-.navTitle {
-    visibility: hidden;
-    grid-area: navTitle;
 }
 
 .footer {
@@ -99,56 +136,9 @@ hr {
     background-color: #E6ECF2;
 }
 
-.cards {
-    margin: 0;
-    padding: 0;
 
-    display: grid;
-    grid-template-columns: 100%;
 
-    row-gap: 5vw;
-}
 
-.indexCards {
-    grid-template-areas:
-        "bioCard"
-        "languagesCard";
-}
-
-.tutoringCards {
-    grid-template-areas:
-        "tutorSubjectsCard";
-}
-
-.bioCard{
-    grid-area: bioCard;
-}
-
-.languagesCard{
-    grid-area: languagesCard;
-}
-
-.tutorSubjectsCard{
-    grid-area: tutorSubjectsCard;
-}
-
-.tutorSubjectsList{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "schoolSubjects uniSubjects otherSubjects";
-}
-
-.schoolSubjects{
-    grid-area: schoolSubjects;
-}
-
-.uniSubjects{
-    grid-area: uniSubjects;
-}
-
-.otherSubjects{
-    grid-area: otherSubjects;
-}
 
 .languagesList>p{
     position: relative;
@@ -175,7 +165,7 @@ hr {
     width: 100%;
     height: auto;
     background-color: green;
-    background-image: url("/static/img/splash.png");
+    background-image: url("../img/splash.png");
     background-position: 0 0;
     background-size: 150vh;
     display: grid;
@@ -388,4 +378,4 @@ hr {
         font-size: 1.5rem;
     }
     
-}
+} */

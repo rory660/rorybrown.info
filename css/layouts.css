@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.splash{
+    width: 100vw;
+    padding: 2vh 0vw; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.splash>*{
+    margin: 1vw;
+}
+
+.splash>.face{
+    margin-left: 5vw;
+}
+
+.tagline{
+    display: flex;
+    margin-right: 5vw;
+}
+
+.tagline>h1~h1{
+    margin-left: 1rem;
+}
+
+.jobTextContainer{
+    position: relative;
+    color: transparent;
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+.jobText{
+    position: absolute;
+    white-space: nowrap;
+}
+
+.cards{
+    display: flex;
+}
+
+.cardContent{
+    padding: 1vh 1vw;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.bioCard .cardContent{
+    flex-direction: column;
+}
+
+.cardContent p{
+    margin: 0.5rem 0;
+}
+
+.tutoringCard .cardContent>div{
+    width: 47%;
+}
+
+.tutorfulLinkContainer{
+    text-align: center;
+}
+
+.spaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tutoringDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+
+    .splash{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tagline{
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        padding: 2vh 4vw;
+    }
+
+    .card{
+        margin-left: 0;
+    }
+
+    .cardContent{
+        flex-direction: column;
+        padding: 2vh;
+    }
+    .tutoringCard .cardContent>div{
+        width: auto;
+    }
+}
+
+
+/* .indexCards {
+    grid-template-areas:
+        "bioCard"
+        "languagesCard";
+}
+
+.tutoringCards {
+    grid-template-areas:
+        "tutorSubjectsCard";
+}
+
+.bioCard{
+    grid-area: bioCard;
+}
+
+.languagesCard{
+    grid-area: languagesCard;
+}
+
+.tutorSubjectsCard{
+    grid-area: tutorSubjectsCard;
+}
+
+.tutorSubjectsList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "schoolSubjects uniSubjects otherSubjects";
+}
+
+.schoolSubjects{
+    grid-area: schoolSubjects;
+}
+
+.uniSubjects{
+    grid-area: uniSubjects;
+}
+
+.otherSubjects{
+    grid-area: otherSubjects;
+}
+
+.cards {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 100%;
+
+    row-gap: 5vw;
+} */

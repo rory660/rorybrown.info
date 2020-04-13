@@ -1,0 +1,23 @@
+.jobText{
+    animation: fastFade 6s infinite;
+}
+
+.jobText::after{
+    content: "programmer";
+    animation: jobTextChange 18s infinite;
+}
+
+@keyframes fastFade{
+    0%{color: #23F0C7;}
+    20%{color: #23F0C7;}
+    30%{color: transparent;}
+    40%{color: #23F0C7;}
+    100%{color: #23F0C7;}
+}
+
+@keyframes jobTextChange{
+    0% {content: "programmer";}
+    33% {content: "tutor";}
+    66% {content: "CS student";}
+    100%{content: "programmer";}
+}

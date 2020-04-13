@@ -1,4 +1,1 @@
 .vscode/*
-venv
-app/__pycache__
-app/data/*
