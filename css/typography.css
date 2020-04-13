@@ -62,6 +62,10 @@ li{
     font-size: 0.8rem;
 }
 
+.tutorfulLink:active{
+    background-color: rgb(224, 214, 238);
+}
+
 .tutorHoursHeading{
     display: flex;
     justify-content: space-between;
