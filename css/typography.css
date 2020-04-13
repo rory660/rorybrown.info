@@ -21,7 +21,7 @@ a{
 }
 
 ul{
-    margin-left: 1rem;
+    margin-left: 1vw;
 }
 
 li{
@@ -101,4 +101,11 @@ li{
 .emailLink:hover{
     background-color: whitesmoke;
     color: rgb(42, 60, 75);
+}
+
+@media screen and (max-width: 1380px) {
+    html{
+        font-size: 16px;
+    }
+
 }
