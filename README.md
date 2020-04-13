@@ -1,2 +1,3 @@
 # rorybrown.info
-CV site
+
+My personal website. [Check it out here!](http://www.rorybrown.info)
