@@ -88,3 +88,13 @@ li{
     color: rgb(42, 60, 75);
 }
 
+.emailLink{
+    color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 0.1rem;
+}
+
+.emailLink:hover{
+    background-color: whitesmoke;
+    color: rgb(42, 60, 75);
+}

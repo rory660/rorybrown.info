@@ -8,7 +8,7 @@ body{
 
 .splash{
     width: 100vw;
-    padding: 2vh 0vw; 
+    padding: 2vh 0; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,7 +19,12 @@ body{
 }
 
 .splash>.face{
-    margin-left: 5vw;
+    margin-left: 10vw;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .tagline{
@@ -34,7 +39,6 @@ body{
 .jobTextContainer{
     position: relative;
     color: transparent;
-    user-drag: none; 
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -86,7 +90,7 @@ body{
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1360px) {
 
     .splash{
         flex-direction: column;
@@ -115,56 +119,8 @@ body{
     .tutoringCard .cardContent>div{
         width: auto;
     }
+
+    .splash .face{
+        margin-left: 0;
+    }
 }
-
-
-/* .indexCards {
-    grid-template-areas:
-        "bioCard"
-        "languagesCard";
-}
-
-.tutoringCards {
-    grid-template-areas:
-        "tutorSubjectsCard";
-}
-
-.bioCard{
-    grid-area: bioCard;
-}
-
-.languagesCard{
-    grid-area: languagesCard;
-}
-
-.tutorSubjectsCard{
-    grid-area: tutorSubjectsCard;
-}
-
-.tutorSubjectsList{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "schoolSubjects uniSubjects otherSubjects";
-}
-
-.schoolSubjects{
-    grid-area: schoolSubjects;
-}
-
-.uniSubjects{
-    grid-area: uniSubjects;
-}
-
-.otherSubjects{
-    grid-area: otherSubjects;
-}
-
-.cards {
-    margin: 0;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 100%;
-
-    row-gap: 5vw;
-} */
