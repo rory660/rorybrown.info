@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     
     background-color: rgb(42, 60, 75);
@@ -11,7 +14,9 @@ p{
     background-color: whitesmoke;
 }
 
-
+.vrItem{
+    width: 50%;
+}
 
 .splash{
     width: 100%;
@@ -24,7 +29,15 @@ p{
 }
 
 .content{
-    padding: 1vh 0;
+    padding: 1rem;
+    width: 100vw;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.bigLink{
+    font-size: 2rem;
 }
 
 .face{
@@ -64,7 +77,17 @@ p{
     margin: 0;
 }
 
+#vrCompareLogo{
+    height: 4rem;
+    margin-right: 1rem;
+}
+
 @media screen and (max-width: 1380px) {
+
+    .vrItem{
+        width: 100%;
+    }
+
     .splash{
         background-position: -100px -300px;
     }

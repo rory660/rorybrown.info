@@ -91,6 +91,21 @@ body{
     justify-content: space-evenly;
 }
 
+.vrCompareCard{
+    width: auto;
+}
+
+.vrCompareCard .cardTop{
+    display: flex;
+    align-items: center;
+}
+
+.vrCompareCard .cardTop:hover{
+    display: flex;
+    align-items: center;
+    background-color: rgb(88, 78, 165);
+}
+
 @media screen and (max-width: 1380px) {
 
     .footer{
