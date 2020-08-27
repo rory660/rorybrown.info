@@ -1,13 +1,10 @@
 :root{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    --purple: #463E84;
-    --blue: #3e6884;
-
-    --purple: #5b50ad;
+    
+    --purple: #594fa0;
     --mediumBlue: #2d365a;
     --blue: #5088ad;
-
+    
     --background: #141c2b;
 }
 
@@ -52,9 +49,15 @@ p{
     width: 100%;
     align-items: center;
     background-color: var(--background);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--background) 20rem);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--background) 30rem);
     position: relative;
-    top: -25rem;
+    top: -35rem;
     margin-bottom: -25rem;
 
+}
+
+#page{
+    position: relative;
+    top: 10rem;
+    box-shadow: 0px 20px 40px rgb(2, 12, 14);
 }

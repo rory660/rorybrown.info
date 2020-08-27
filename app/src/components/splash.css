@@ -15,7 +15,7 @@
     top: -2%;
     background-color: gray;
     background-image: url("/img/splash.png");
-    background-size: 102%;
+    background-size: 120%;
     filter: blur(8px) brightness(60%);
 }
 
