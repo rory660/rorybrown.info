@@ -1,5 +1,18 @@
 :root{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    --purple: #463E84;
+    --blue: #3e6884;
+
+    --purple: #5b50ad;
+    --mediumBlue: #2d365a;
+    --blue: #5088ad;
+
+    --background: #141c2b;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 body{
@@ -18,12 +31,30 @@ h1{
     margin: 0;
 }
 
+h2{
+    margin: 0;
+    padding: 0.5rem;
+}
+
 p{
     margin: 0;
     padding: 1rem;
 }
 
 .app{
-    background-color: green;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#background{
+    width: 100%;
+    align-items: center;
+    background-color: var(--background);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--background) 20rem);
+    position: relative;
+    top: -25rem;
+    margin-bottom: -25rem;
+
 }

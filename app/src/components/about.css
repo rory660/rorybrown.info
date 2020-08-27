@@ -1,0 +1,44 @@
+#about{
+    min-width: 65rem;
+    width: 100%;
+    height: 16rem;
+    background-color: var(--mediumBlue);
+    overflow: hidden;
+}
+
+#aboutContents{
+    width: 200%;
+    height: 16rem;
+    flex-direction: row;
+    position: relative;
+    transition: margin-left ease-in-out 1.2s;
+}
+
+#aboutContents.toggled{
+    margin-left: calc(16rem - 100%);
+}
+
+#aboutContents>img{
+    height: 100%;
+}
+
+.aboutInfo{
+    width: calc(50% - 16rem);
+    padding: 1rem;
+    color: white;
+}
+
+.aboutHeading{
+    font-size: 2rem;
+    padding: 0;
+}
+
+.aboutTagline{
+    margin: 0.5rem 0;
+    font-weight: normal;
+}
+
+#aboutRight{
+    text-align: right;
+    align-items: flex-end;
+}
