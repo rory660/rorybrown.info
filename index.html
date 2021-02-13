@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163510809-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163510809-1');
+    </script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rory Brown (@rory660) - Freelance Tutor, Software Engineer</title>
+    <meta name = "description" content = "Hi! I'm Rory Brown (@rory660), a freelance tutor and computer scientist. Need a tutor or have a question? Send me an email at contact@rorybrown.info">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="16x16 32x32">
+
     <link rel="stylesheet" href="/master.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -29,10 +44,10 @@
             <div class="splashBio">
                 <div>
                     <h1>Hi! I'm Rory Brown</h1>
-                    <h2>I'm a programmer</h2>
+                    <h2>Programmer / VR Enthusiast</h2>
                 </div>
                 <div>
-                    <a class="button" href="#projects" target="_blank">My Work</a>
+                    <a class="button" href="#projects">My Work</a>
                 </div>
             </div>
             <img src="/img/headshot.png">
@@ -40,16 +55,19 @@
 
     </div>
     <div id="page">
-        <section>
-            <h2 id="projects">Projects</h2>
+        <section id="projects">
+            <h2>Projects</h2>
             <div class="project">
                 <div class="projectLeft">
                     <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
-                        <h3>VRcompare</h3>
-                        <a class="viewProjectButton button" href="https://vr-compare.com" class="button">Visit site <i class="fa fa-external-link"></i></a>
+                        <div id="vrCompareLogo">
+                            <img src="/img/vrCompareLogo.png" alt="">
+                            <h3>VRcompare</h3>
+                        </div>
+                        <a class="viewProjectButton button" href="https://vr-compare.com" target="_blank" class="button">Visit site <i class="fa fa-external-link"></i></a>
                     </div>
                     <p>
-                        VRCompare is the internet's most comprehensive database of VR headsets. It allows users to get detailed information about VR headsets from a single source, and create customisable comparisons between them.
+                        VRcompare is the internet's most comprehensive database of VR headsets. It allows users to get detailed information about VR headsets from a single source, and create customisable comparisons between them.
                     </p>
                     <ul>
                         <li>View full VR headset specs, prices, and reviews</li>

@@ -50,8 +50,8 @@ a{
     color: #f3f3f3;
     border: 2px solid #0e1e22;
     background-color: rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 3px 0px #0e1e22;
-    padding: 1rem 2rem;
+    box-shadow: 0px 0px 3px 0px #0000007e;
+    padding: 0.5em 1.5em;
     user-select: none;
     font-style: italic;
 }
@@ -67,17 +67,19 @@ a{
 
 #splash{
     width: 100%;
-    height: 60vh;
+    height: 30rem;
     position: relative;
     overflow: hidden;
     color: white;
 }
 
 #splash h1{
+    font-family: poppins;
     margin-bottom: 1rem;
 }
 #splash h2{
     font-style: normal;
+    font-size: 1.2em;
 }
 
 .splashBackground{
@@ -108,8 +110,8 @@ a{
 }
 
 .splashBio{
-    font-size: 2em;
-    height: 60%;
+    font-size: 1.7em;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
@@ -126,20 +128,19 @@ a{
 .splashContents>img{
     position: relative;
     top: 1rem;
-    height: 60%;
+    height: 20rem;
     outline-offset: 0rem;
     border: 1rem solid #0e1e22;
-    border-top: 2rem solid #0e1e22;
     box-shadow: 0px 0px 5px 0px #000000;
 }
 
 #page{
     z-index: 1;
-    height: 100vh;
     border-top: 2rem solid #0e1e22;
     background-color: #142b31;
     box-shadow: 0px 0px 5px 0px #000000;
     padding: 2rem 12%;
+    min-height: 80vh;
 }
 
 #footer{
@@ -163,16 +164,27 @@ a{
     padding: 0.5rem;
 }
 
+section>h2{
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 2rem;
+}
+
+
+#projects{
+    margin: 0 2%;
+    margin-bottom: 10rem;
+}
 .project{
     display: flex;
     font-size: 1.2rem;
-    background-color: #0e1e22;
+    background-color: #0e1e22a1;
     padding: 2rem;
     justify-content: space-between;
 }
 
 .projectLeft{
-    width: 60%;
+    width: 70%;
 }
 
 .projectLeft>p{
@@ -201,27 +213,42 @@ a{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    right: -5%;
+    right: -10%;
 }
 
 .projectRight>img{
-    filter: drop-shadow(10px 10px 5px #0e1e22);
+    filter: drop-shadow(10px 10px 5px #0000007e);
 }
 
 .desktopImg{
     position: absolute;
-    max-width: 100%;
+    height: 15rem;
     right: -5%;
 }
 
 .mobileImg{
     position: absolute;
     right: -10%;
-    max-width: 40%;
+    height: 12rem;
     top: 25%;
 }
 
+#vrCompareLogo{
+    display: flex;
+    align-items: center;
+}
 
+#vrCompareLogo>img{
+    width: 5em;
+    filter: drop-shadow(0 5px 2px #0000007e);
+}
+#vrCompareLogo>h3{
+    padding-left: 0.3em;
+    font-size: 1.5em;
+    font-family: poppins, sans-serif;
+    color: rgb(250, 250, 250);
+    text-shadow: 0 5px #0e1e22;
+}
 
 
 
@@ -321,6 +348,73 @@ a{
 
 @media only screen and (min-width: 2000px){
     :root{
-        font-size: 20pt;
+        font-size: 18pt;
+    }
+}
+
+@media only screen and (max-width: 1500px){
+    :root{
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+
+    
+
+    #splash{
+        height: 55rem;
+    }
+    .splashContents{
+        padding: 0 5%;
+        padding-top: 10rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .splashBio{
+        align-items: center;
+        height: 100%;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+
+    .splashContents>img{
+    }
+
+    .project{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .projectLeft{
+        width: 100%;
+    }
+
+    .projectRight{
+        height: 12rem;
+        width: 100%;
+        right: 0;
+        bottom: -3rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desktopImg{
+        right: auto;
+    }
+
+    .mobileImg{
+        padding-left: 15rem;
+        right: auto;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    :root{
+        font-size: 8pt;
+    }
+    #page{
+        padding: 1rem 0;
     }
 }
