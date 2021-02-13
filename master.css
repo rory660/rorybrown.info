@@ -259,7 +259,7 @@ section>h2{
 
 .scrolling{
     animation-name: scrollingLeft;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: absolute;
@@ -277,63 +277,63 @@ section>h2{
 
 #scrolling2{
     background-color: #75cabb;
-    animation-delay: -1s;
-    top: 100vh;
+    animation-delay: -2s;
+    top: 100%;
 }
 
 #scrolling3{
     background-color: #92b1cc;
-    animation-delay: -2s;
-    top: 70vh;
+    animation-delay: -4s;
+    top: 70%;
 }
 
 #scrolling4{
     background-color: #575186;
-    animation-delay: -3s;
-    top: 20vh;
+    animation-delay: -6s;
+    top: 20%;
 }
 
 #scrolling5{
     background-color: #75cabb;
-    animation-delay: -4s;
-    top: 60vh;
+    animation-delay: -8s;
+    top: 60%;
 }
 
 #scrolling6{
     background-color: #92b1cc;
-    animation-delay: -5s;
-    top: 10vh;
+    animation-delay: -10s;
+    top: 10%;
 }
 
 #scrolling7{
     background-color: #575186;
-    animation-delay: -6s;
-    top: 40vh;
+    animation-delay: -12s;
+    top: 40%;
 }
 
 #scrolling8{
     background-color: #75cabb;
-    animation-delay: -7s;
-    top: 90vh;
+    animation-delay: -14s;
+    top: 90%;
 }
 
 #scrolling9{
     background-color: #92b1cc;
-    animation-delay: -8s;
-    top: 30vh;
+    animation-delay: -5s;
+    top: 30%;
 }
 
 #scrolling10{
     background-color: #575186;
-    animation-delay: -9s;
-    top: 10vh;
+    animation-delay: -11s;
+    top: 10%;
 }
 
 
 
 @keyframes scrollingLeft{
     from{
-        height: 100px;
+        height: 80px;
         opacity: 30%;
         left: 110vw;
     }
