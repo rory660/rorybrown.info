@@ -26,8 +26,8 @@ function preload(){
 function setup(){
     createCanvas(1200, 1200, WEBGL)
     camera(0, 0, 600, -80, 100, 0)
-
-    noStroke()
+    strokeWeight(0.2)
+    stroke(color(0, 200, 255))
 }
 
 function draw(){
