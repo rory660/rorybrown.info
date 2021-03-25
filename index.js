@@ -31,7 +31,7 @@ function setup(){
 }
 
 function draw(){
-    background(BACKGROUND_COLOUR)
+    clear()
     // background("black")
     ambientLight(50, 50, 100)
     pointLight(0, 200, 250, -200, 800, -500)
