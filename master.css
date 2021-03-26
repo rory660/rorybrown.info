@@ -110,7 +110,7 @@ main{
     height: 100%;
     align-items: flex-end;
     justify-content: center;
-    background: linear-gradient(#06252b4d, #04070cc9);
+    background: linear-gradient(#030608, #07252c50);
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -369,6 +369,10 @@ section>h2{
 @media only screen and (max-width: 1500px){
     :root{
         font-size: 10pt;
+    }
+    main{
+        margin-top: -8rem;
+        margin-right: -10rem;
     }
 }
 

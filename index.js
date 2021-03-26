@@ -1,18 +1,19 @@
 const HEADSET_MODEL_PATH = "3d/headset.obj"
 const BACKGROUND_COLOUR = "#0e1e22"
 const HEADSET_COLOUR = "#002040"
-const ROTATION_SCALE = 40000
-const MODEL_SCALE = 2.6
+const ROTATION_SCALE = 50000
+const MODEL_SCALE = 2.45
 
 const BASE_X_ROTATION = 3.05
 const BASE_Y_ROTATION = 3.8
-const ROTATION_SPEED = 0.1
+const ROTATION_SPEED = 0.02
 
 
 let headsetModel
 let headsetTexture
 let mouseX
 let mouseY
+let updateCounter = 10
 
 let xRotation = BASE_X_ROTATION
 let yRotation = BASE_Y_ROTATION
@@ -38,11 +39,13 @@ function draw(){
 
     texture(headsetTexture)
     specularMaterial(color(HEADSET_COLOUR))
+    let scaleAmount = MODEL_SCALE
+    if(window.innerWidth < 1500) scaleAmount /= 1.5
 
-    scale(MODEL_SCALE)
+    scale(scaleAmount)
 
-    const targetXRotation = BASE_X_ROTATION + mouseY / ROTATION_SCALE * PI
-    const targetYRotation = BASE_Y_ROTATION + mouseX / ROTATION_SCALE * PI
+    const targetXRotation = BASE_X_ROTATION - mouseY / ROTATION_SCALE * PI
+    const targetYRotation = BASE_Y_ROTATION - mouseX / ROTATION_SCALE * PI
     if(targetXRotation && targetYRotation){
         const xDelta = targetXRotation - xRotation
         const yDelta = targetYRotation - yRotation
@@ -56,8 +59,16 @@ function draw(){
     model(headsetModel)
 }
 
-
 document.addEventListener("mousemove", e => {
+    if(updateCounter == 0){
+        updateCounter = 10
+        mouseX = e.pageX
+        mouseY = e.pageY
+    }
+    else updateCounter--
+})
+
+document.addEventListener("mousedown", e => {
     mouseX = e.pageX
     mouseY = e.pageY
 })
