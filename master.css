@@ -382,6 +382,7 @@ section>h2{
     main{
         margin: 0rem;
         margin-top: -10rem;
+        margin-right: 5rem;
     }
     #splash{
         height: 55rem;
@@ -446,5 +447,13 @@ section>h2{
     }
     #page{
         padding: 1rem 0;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    main{
+        margin-right: 15rem;
     }
 }

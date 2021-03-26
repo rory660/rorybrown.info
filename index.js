@@ -40,7 +40,9 @@ function draw(){
     texture(headsetTexture)
     specularMaterial(color(HEADSET_COLOUR))
     let scaleAmount = MODEL_SCALE
-    if(window.innerWidth < 1500) scaleAmount /= 1.5
+    if(window.innerWidth < 800){
+        scaleAmount /= 2
+    }else if(window.innerWidth < 1500) scaleAmount /= 1.5
 
     scale(scaleAmount)
 
