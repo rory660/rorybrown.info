@@ -46,13 +46,19 @@ main{
     margin-top: -2rem;
     margin-right: 5rem;
     z-index: 1;
-    animation: fadeIn 4s;
+    animation: fadeIn 4s, float 8s ease-in-out infinite;
 }
 
 @keyframes fadeIn{
     0%{opacity: 0;}
     30%{opacity: 0;}
     100%{opacity: 100%;}
+}
+
+@keyframes float{
+    0%{transform: translateY(-15px)}
+    50%{transform: translateY(15px)}
+    100%{transform: translateY(-15px)}
 }
 
 .button{

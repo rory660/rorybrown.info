@@ -9,6 +9,7 @@ const BASE_Y_ROTATION = 3.8
 const ROTATION_SPEED = 0.02
 
 
+
 let headsetModel
 let headsetTexture
 let mouseX
@@ -33,6 +34,7 @@ function setup(){
 
 function draw(){
     clear()
+    smooth()
     // background("black")
     ambientLight(50, 50, 100)
     pointLight(0, 200, 250, -200, 800, -500)
