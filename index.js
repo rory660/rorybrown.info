@@ -1,7 +1,7 @@
 const HEADSET_MODEL_PATH = "3d/headset.obj"
 const BACKGROUND_COLOUR = "#0e1e22"
 const HEADSET_COLOUR = "#002040"
-const ROTATION_SCALE = 50000
+const ROTATION_SCALE = 50000 
 const MODEL_SCALE = 2.45
 
 const BASE_X_ROTATION = 3.05
@@ -42,7 +42,7 @@ function draw(){
     texture(headsetTexture)
     specularMaterial(color(HEADSET_COLOUR))
     let scaleAmount = MODEL_SCALE
-    if(window.innerWidth < 500){
+    if(window.innerWidth < 600){
         scaleAmount /= 3
     }
     else if(window.innerWidth < 800){
@@ -50,9 +50,10 @@ function draw(){
     }else if(window.innerWidth < 1500) scaleAmount /= 1.5
 
     scale(scaleAmount)
+    const rotationScale = ROTATION_SCALE * window.innerWidth / 2560
 
-    const targetXRotation = BASE_X_ROTATION - mouseY / ROTATION_SCALE * PI
-    const targetYRotation = BASE_Y_ROTATION - mouseX / ROTATION_SCALE * PI
+    const targetXRotation = BASE_X_ROTATION - mouseY / rotationScale * PI
+    const targetYRotation = BASE_Y_ROTATION - mouseX / rotationScale * PI
     if(targetXRotation && targetYRotation){
         const xDelta = targetXRotation - xRotation
         const yDelta = targetYRotation - yRotation
