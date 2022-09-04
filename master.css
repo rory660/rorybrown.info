@@ -217,17 +217,20 @@ section>h2{
 
 .infoCardLeft>p{
     padding-left: 1rem;
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.7)
 }
 
 .infoCardLeft li{
     margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.9)
 }
 
 .infoCard h3{
+    font-family: poppins;
     text-shadow: 0 3px #0e1e22;
     font-size: 1.4em;
     font-weight: normal;
+    margin-top: 1.5em;
 }
 
 .viewProjectButton{
