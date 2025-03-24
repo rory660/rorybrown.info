@@ -3,6 +3,8 @@
 @theme {
   --font-primary: Poppins, sans-serif;
   --animate-gradient: gradient 8s linear infinite;
+
+  --color-bg-dark: #050505;
 }
 
 /* Keyframes for the gradient animation */
