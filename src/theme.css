@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-    --font-primary: Poppins, sans-serif;
+  --font-primary: Poppins, sans-serif;
+  --animate-gradient: gradient 8s linear infinite;
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
