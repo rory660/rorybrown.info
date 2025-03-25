@@ -26,36 +26,40 @@ export const Hero = () => {
             />
           </div>
           <div className="w-full h-full max-w-[1080px] absolute flex flex-row justify-center gap-16 items-center font-extrabold bg-radial to-75% from-bg-dark to-transparent">
-            <div className="h-full flex flex-col justify-center items-end gap-8">
-              <h1 className="font-primary text-white select-none pointer-events-none">
+            <div className="h-full flex flex-col justify-center items-end gap-2">
+              <h1 className="font-primary text-white select-none pointer-events-none text-6xl">
                 Rory Brown
               </h1>
-              <h2 className="font-primary text-white italic">
-                <GradientText
-                  colors={["#4079ff", "#40ffaa"]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="pointer-events-none select-none"
-                >
-                  - Senior Full Stack Engineer
-                </GradientText>
-                <GradientText
-                  colors={["#4079ff", "#40ffaa"]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="pointer-events-none select-none"
-                >
-                  - Founder @ VRcompare
-                </GradientText>
-                <GradientText
-                  colors={["#40ffaa", "#4079ff", "#40ffaa"]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="pointer-events-none select-none"
-                >
-                  - Backend & web3 @ LI.FI
-                </GradientText>
-              </h2>
+              <div className="font-primary flex flex-col items-end gap-4">
+                <h2 className="text-base -mt-3 text-cyan-800">
+                  <GradientText
+                    colors={["#4079ff", "#40ffaa"]}
+                    animationSpeed={8}
+                    showBorder={false}
+                    className="pointer-events-none select-none"
+                  >
+                    Senior Full Stack Engineer
+                  </GradientText>
+                </h2>
+                <h2 className="font-primary text-white italic font-bold">
+                  <GradientText
+                    colors={["#4079ff", "#40ffaa"]}
+                    animationSpeed={8}
+                    showBorder={false}
+                    className="pointer-events-none select-none"
+                  >
+                    - Founder @ VRcompare
+                  </GradientText>
+                  <GradientText
+                    colors={["#4079ff", "#40ffaa"]}
+                    animationSpeed={8}
+                    showBorder={false}
+                    className="pointer-events-none select-none"
+                  >
+                    - Backend & web3 @ LI.FI
+                  </GradientText>
+                </h2>
+              </div>
             </div>
             <TiltedCard
               imageSrc="/rory.jpg"
