@@ -13,7 +13,7 @@ export const Hero = () => {
             "Game Dev. VR. Web3. Microservices. Frontend. Backend.",
           ]}
           velocity={10}
-          className="font-primary opacity-50 text-cyan-950 pointer-events-none select-none"
+          className="font-primary text-cyan-950 pointer-events-none select-none"
         />
 
         <div className="flex-1 relative items-center justify-center flex">
@@ -79,7 +79,7 @@ export const Hero = () => {
             "Game Dev. VR. Web3. Microservices. Frontend. Backend.",
           ]}
           velocity={10}
-          className="font-primary opacity-50 text-cyan-950 pointer-events-none select-none"
+          className="font-primary text-cyan-950 pointer-events-none select-none"
         />
       </div>
     </div>

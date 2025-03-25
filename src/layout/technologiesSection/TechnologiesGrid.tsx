@@ -38,8 +38,7 @@ import {
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
 import { TbBrandAzure } from "react-icons/tb";
-import GridMotion from "../components/GridMotion";
-import ScrollFloat from "../components/ScrollFloat";
+import GridMotion from "../../components/GridMotion";
 
 const TechnologyCell = (props: {
   color: string;
@@ -66,15 +65,15 @@ const TechnologyCell = (props: {
   </div>
 );
 
-export const TechnologiesSection = () => {
+export const TechnologiesGrid = () => {
   // note: you'll need to make sure the parent container of this component is sized properly
   const items = [
-    <TechnologyCell icon={FaLinux} color="#080808" text="Linux" />,
     <TechnologyCell
       icon={BiLogoPostgresql}
       color="#3A6C94"
       text="PostgreSQL"
     />,
+    <TechnologyCell icon={FaLinux} color="#080808" text="Linux" />,
     <TechnologyCell icon={FaAws} color="#FE9C15" text="Amazon Web Services" />,
     <TechnologyCell icon={FaDocker} color="#2A99ED" text="Docker" />,
     <TechnologyCell icon={FaReact} color="#67DAFB" text="React" />,
@@ -145,19 +144,5 @@ export const TechnologiesSection = () => {
     <TechnologyCell icon={SiExpo} color="#4C36EC" text="Expo" />,
   ];
 
-  return (
-    <div className="w-full font-primary text-8xl relative z-10 mb-20">
-      <div className="w-full h-[50vh] flex flex-col items-center justify-center mt-10">
-        <ScrollFloat textClassName="font-extrabold">
-          Hey, I'm Rory! I'm a senior full stack web developer!
-        </ScrollFloat>
-        <div className="text-4xl">
-          <ScrollFloat textClassName="font-extrabold !font-2xl">
-            Here's some of what I can do
-          </ScrollFloat>
-        </div>
-      </div>
-      <GridMotion items={items} />
-    </div>
-  );
+  return <GridMotion items={items} />;
 };

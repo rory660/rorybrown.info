@@ -1,5 +1,5 @@
 import { Hero } from "./layout/Hero";
-import { TechnologiesSection } from "./layout/TechnologiesSection";
+import { TechnologiesSection } from "./layout/technologiesSection/TechnologiesSection";
 import { WorkSection } from "./layout/WorkSection";
 
 function App() {

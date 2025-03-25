@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { FC, JSX, useEffect, useRef } from "react";
+import { FC, JSX, useEffect, useRef, useState } from "react";
 
 interface GridMotionProps {
   items?: (string | JSX.Element)[];
@@ -9,7 +9,8 @@ interface GridMotionProps {
 const GridMotion: FC<GridMotionProps> = ({ items = [] }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const mouseXRef = useRef<number>(window.innerWidth / 2);
+  const idleOffsetRef = useRef<number>(0); // Tracks the idle offset for slow movement
+  const [isMouseOver, setIsMouseOver] = useState(false); // Tracks if the mouse is over the grid
 
   const totalItems = 32;
   const defaultItems = Array.from(
@@ -22,22 +23,23 @@ const GridMotion: FC<GridMotionProps> = ({ items = [] }) => {
   useEffect(() => {
     gsap.ticker.lagSmoothing(0);
 
-    const handleMouseMove = (e: MouseEvent): void => {
-      mouseXRef.current = e.clientX;
-    };
-
     const updateMotion = (): void => {
-      const maxMoveAmount = 300;
-      const baseDuration = 0.8; // Base duration for inertia
+      const baseDuration = 1000; // Base duration for inertia
       const inertiaFactors = [0.6, 0.4, 0.3, 0.2]; // Different inertia for each row, outer rows slower
+
+      // Increment the idle offset for slow movement
+      if (!isMouseOver) {
+        idleOffsetRef.current += 0.1; // Adjust this value for slower or faster idle movement
+      }
 
       rowRefs.current.forEach((row, index) => {
         if (row) {
           const direction = index % 2 === 0 ? 1 : -1;
-          const moveAmount =
-            ((mouseXRef.current / window.innerWidth) * maxMoveAmount -
-              maxMoveAmount / 2) *
-            direction;
+
+          // Calculate movement based on idle offset
+          const moveAmount = isMouseOver
+            ? 0 // Pause movement when mouse is over
+            : Math.sin(idleOffsetRef.current / 100) * 2000 * direction; // Add slow oscillation when idle
 
           gsap.to(row, {
             x: moveAmount,
@@ -51,20 +53,23 @@ const GridMotion: FC<GridMotionProps> = ({ items = [] }) => {
     };
 
     const removeAnimationLoop = gsap.ticker.add(updateMotion);
-    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
       removeAnimationLoop();
     };
-  }, []);
+  }, [isMouseOver]);
 
   return (
-    <div ref={gridRef} className="h-screen w-full overflow-visible">
-      <section className="w-full h-[150vh] -top-[25vh] overflow-hidden relative flex items-center justify-center">
+    <div
+      ref={gridRef}
+      className="h-screen w-full overflow-visible"
+      onMouseEnter={() => setIsMouseOver(true)} // Pause motion when mouse enters
+      onMouseLeave={() => setIsMouseOver(false)} // Resume motion when mouse leaves
+    >
+      <section className="w-full h-[150vh] -top-[25vh] overflow-visible relative flex items-center justify-center">
         {/* Noise overlay */}
         <div className="absolute inset-0 pointer-events-none z-[4] bg-[url('../../../assets/noise.png')] bg-[length:250px]"></div>
-        <div className="gap-4 flex-none relative w-[130vw] h-[80vh] grid grid-rows-4 grid-cols-1 rotate-[-10deg] origin-center z-[2]">
+        <div className="gap-4 flex-none relative w-[130vw] h-[80vh] grid grid-rows-4 grid-cols-1 origin-center z-[2]">
           {Array.from({ length: 4 }, (_, rowIndex) => (
             <div
               key={rowIndex}
