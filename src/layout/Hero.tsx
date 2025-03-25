@@ -8,13 +8,16 @@ export const Hero = () => {
     <div className="w-full flex flex-col items-center">
       <div className="h-screen w-full flex flex-col justify-between">
         <ScrollVelocity
-          texts={["The Sickest Dev", "Probably Ever"]}
+          texts={[
+            "Backend. Frontend. Databases. APIs. Microservices. Web3. VR. Game Dev.",
+            "Game Dev. VR. Web3. Microservices. Frontend. Backend.",
+          ]}
           velocity={10}
-          className="font-primary text-zinc-900 pointer-events-none select-none"
+          className="font-primary opacity-50 text-cyan-950 pointer-events-none select-none"
         />
 
         <div className="flex-1 relative items-center justify-center flex">
-          <div className="absolure h-full w-full">
+          <div className="absolute h-full w-full">
             <Squares
               speed={0.05}
               squareSize={60}
@@ -67,9 +70,12 @@ export const Hero = () => {
           </div>
         </div>
         <ScrollVelocity
-          texts={["The Sickest Dev", "Probably Ever"]}
+          texts={[
+            "Backend. Frontend. Databases. APIs. Microservices. Web3. VR. Game Dev.",
+            "Game Dev. VR. Web3. Microservices. Frontend. Backend.",
+          ]}
           velocity={10}
-          className="font-primary text-zinc-900 pointer-events-none select-none"
+          className="font-primary opacity-50 text-cyan-950 pointer-events-none select-none"
         />
       </div>
     </div>
