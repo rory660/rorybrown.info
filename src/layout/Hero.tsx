@@ -1,6 +1,7 @@
 import GradientText from "../components/GradientText";
 import ScrollVelocity from "../components/ScrollVelocity";
 import Squares from "../components/Squares";
+import TiltedCard from "../components/TiltedCard";
 
 export const Hero = () => {
   return (
@@ -21,26 +22,48 @@ export const Hero = () => {
               borderColor="#40ffaa"
             />
           </div>
-          <div className="w-full h-full absolute flex flex-col justify-center items-center font-extrabold">
-            <div className="w-full h-full flex flex-col justify-center items-center gap-8 bg-radial to-75% from-bg-dark to-transparent">
-              <h1 className="font-primary text-white">Rory Brown</h1>
+          <div className="w-full h-full max-w-[1080px] absolute flex flex-row justify-center gap-16 items-center font-extrabold bg-radial to-75% from-bg-dark to-transparent">
+            <div className="h-full flex flex-col justify-center items-end gap-8">
+              <h1 className="font-primary text-white select-none pointer-events-none">
+                Rory Brown
+              </h1>
               <h2 className="font-primary text-white italic">
                 <GradientText
-                  colors={[
-                    "#40ffaa",
-                    "#4079ff",
-                    "#40ffaa",
-                    "#4079ff",
-                    "#40ffaa",
-                  ]}
+                  colors={["#4079ff", "#40ffaa"]}
                   animationSpeed={3}
                   showBorder={false}
                   className="pointer-events-none select-none"
                 >
-                  - The sickest dev probably ever -
+                  - Senior Full Stack Engineer
+                </GradientText>
+                <GradientText
+                  colors={["#4079ff", "#40ffaa"]}
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="pointer-events-none select-none"
+                >
+                  - Founder @ VRcompare
+                </GradientText>
+                <GradientText
+                  colors={["#40ffaa", "#4079ff", "#40ffaa"]}
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="pointer-events-none select-none"
+                >
+                  - Backend & web3 @ LI.FI
                 </GradientText>
               </h2>
             </div>
+            <TiltedCard
+              imageSrc="/rory.jpg"
+              containerHeight="300px"
+              containerWidth="300px"
+              imageHeight="300px"
+              imageWidth="300px"
+              rotateAmplitude={30}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+            />
           </div>
         </div>
         <ScrollVelocity

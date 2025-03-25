@@ -39,6 +39,7 @@ import { ReactNode } from "react";
 import { IconType } from "react-icons";
 import { TbBrandAzure } from "react-icons/tb";
 import GridMotion from "../components/GridMotion";
+import ScrollFloat from "../components/ScrollFloat";
 
 const TechnologyCell = (props: {
   color: string;
@@ -145,8 +146,18 @@ export const TechnologiesSection = () => {
   ];
 
   return (
-    <div className="w-full ">
-      <GridMotion items={items} />;
+    <div className="w-full font-primary text-8xl relative z-10 mb-20">
+      <div className="w-full h-[50vh] flex flex-col items-center justify-center mt-10">
+        <ScrollFloat textClassName="font-extrabold">
+          Hey, I'm Rory! I'm a senior full stack web developer!
+        </ScrollFloat>
+        <div className="text-4xl">
+          <ScrollFloat textClassName="font-extrabold !font-2xl">
+            Here's some of what I can do
+          </ScrollFloat>
+        </div>
+      </div>
+      <GridMotion items={items} />
     </div>
   );
 };

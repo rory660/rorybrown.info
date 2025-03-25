@@ -6,10 +6,7 @@ interface GridMotionProps {
   gradientColor?: string;
 }
 
-const GridMotion: FC<GridMotionProps> = ({
-  items = [],
-  gradientColor = "black",
-}) => {
+const GridMotion: FC<GridMotionProps> = ({ items = [] }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
   const mouseXRef = useRef<number>(window.innerWidth / 2);
@@ -63,13 +60,8 @@ const GridMotion: FC<GridMotionProps> = ({
   }, []);
 
   return (
-    <div ref={gridRef} className="h-full w-full overflow-hidden">
-      <section
-        className="w-full h-screen overflow-hidden relative flex items-center justify-center"
-        style={{
-          background: `radial-gradient(circle, ${gradientColor} 0%, transparent 100%)`,
-        }}
-      >
+    <div ref={gridRef} className="h-screen w-full overflow-visible">
+      <section className="w-full h-[150vh] -top-[25vh] overflow-hidden relative flex items-center justify-center">
         {/* Noise overlay */}
         <div className="absolute inset-0 pointer-events-none z-[4] bg-[url('../../../assets/noise.png')] bg-[length:250px]"></div>
         <div className="gap-4 flex-none relative w-[130vw] h-[80vh] grid grid-rows-4 grid-cols-1 rotate-[-10deg] origin-center z-[2]">
