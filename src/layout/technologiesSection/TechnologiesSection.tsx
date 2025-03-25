@@ -14,8 +14,8 @@ export const TechnologiesSection = () => {
   const rotation = useTransform(scrollYProgress, [0.05, 0.4], [0, -10]);
 
   return (
-    <div className="w-full font-primary text-8xl relative z-10 mb-30">
-      <div className="w-full h-[50vh] flex flex-col items-center justify-center mt-10">
+    <div className="w-full font-primary text-8xl relative z-10 mb-30 overflow-hidden">
+      <div className="w-full h-[50vh] flex flex-col items-center justify-center mt-50">
         <ScrollFloat textClassName="font-extrabold">
           Hey, I'm Rory! I'm a senior full stack web developer!
         </ScrollFloat>
@@ -26,15 +26,17 @@ export const TechnologiesSection = () => {
         </div>
       </div>
       {/* Use motion.div for the rotating container */}
-      <motion.div
-        ref={sectionRef} // Attach the ref to track this section
-        style={{
-          rotate: rotation, // Bind the rotation value to the rotate property
-        }}
-        className="transition-transform ease-out overflow-visible"
-      >
-        <TechnologiesGrid />
-      </motion.div>
+      <div className="w-full overflow-visible">
+        <motion.div
+          ref={sectionRef} // Attach the ref to track this section
+          style={{
+            rotate: rotation, // Bind the rotation value to the rotate property
+          }}
+          className="transition-transform ease-out overflow-visible"
+        >
+          <TechnologiesGrid />
+        </motion.div>
+      </div>
     </div>
   );
 };

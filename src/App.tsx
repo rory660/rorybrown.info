@@ -1,3 +1,4 @@
+import { Footer } from "./layout/Footer";
 import { Hero } from "./layout/Hero";
 import { TechnologiesSection } from "./layout/technologiesSection/TechnologiesSection";
 import { WorkSection } from "./layout/WorkSection";
@@ -8,6 +9,7 @@ function App() {
       <Hero />
       <TechnologiesSection />
       <WorkSection />
+      <Footer />
     </div>
   );
 }
