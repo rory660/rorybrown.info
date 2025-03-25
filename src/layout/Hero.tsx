@@ -25,9 +25,9 @@ export const Hero = () => {
               borderColor="#40ffaa"
             />
           </div>
-          <div className="w-full h-full max-w-[1080px] absolute flex flex-row justify-center gap-16 items-center font-extrabold bg-radial to-75% from-bg-dark to-transparent">
+          <div className="w-full h-full max-w-[1080px] absolute flex flex-row justify-center gap-16 items-center font-extrabold bg-radial to-75% from-black to-transparent">
             <div className="h-full flex flex-col justify-center items-end gap-2">
-              <h1 className="font-primary text-white select-none pointer-events-none text-6xl">
+              <h1 className="drop-shadow-xl font-primary text-white select-none pointer-events-none text-6xl">
                 Rory Brown
               </h1>
               <div className="font-primary flex flex-col items-end gap-4">
