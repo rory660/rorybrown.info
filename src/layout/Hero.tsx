@@ -21,8 +21,8 @@ export const Hero = () => {
               borderColor="#40ffaa"
             />
           </div>
-          <div className="w-full h-full absolute flex flex-col justify-center items-center gap-4 font-extrabold">
-            <div className="w-full h-full flex flex-col justify-center items-center bg-radial to-75% from-bg-dark to-transparent">
+          <div className="w-full h-full absolute flex flex-col justify-center items-center font-extrabold">
+            <div className="w-full h-full flex flex-col justify-center items-center gap-8 bg-radial to-75% from-bg-dark to-transparent">
               <h1 className="font-primary text-white">Rory Brown</h1>
               <h2 className="font-primary text-white italic">
                 <GradientText

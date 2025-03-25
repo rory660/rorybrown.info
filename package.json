@@ -12,9 +12,13 @@
   "dependencies": {
     "@fontsource/poppins": "^5.2.5",
     "@tailwindcss/vite": "^4.0.15",
+    "@web3icons/react": "^4.0.10",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.5.0",
+    "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "tailwindcss": "^4.0.15"
   },
   "devDependencies": {
