@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rory Brown</title>
+<meta name="description" content="Rory Brown — Tech Lead at LI.FI, Founder of VRcompare. Glasgow." />
+<link rel="icon" href="img/favicon-32x32.png" type="image/png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Albert+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bone:    '#14191c',
+          bone2:   '#1b2226',
+          cream:   '#0e1214',
+          ink:     '#f2ede4',
+          teal:    '#4ab0c4',
+          tealDk:  '#0e2830',
+          tealDr:  '#081a20',
+          tealHi:  '#7ad2e2',
+          rust:    '#d56a4a',
+        },
+        fontFamily: {
+          display: ['"Bricolage Grotesque"', 'ui-sans-serif', 'sans-serif'],
+          sans:    ['"Albert Sans"', 'ui-sans-serif', 'sans-serif'],
+          mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root {
+    --bone: #14191c;
+    --bone2: #1b2226;
+    --cream: #0e1214;
+    --ink: #f2ede4;
+    --teal: #4ab0c4;
+    --tealDk: #0e2830;
+    --tealDr: #081a20;
+    --tealHi: #7ad2e2;
+    --rust: #d56a4a;
+  }
+  html, body { background: var(--bone); color: var(--ink); }
+  body {
+    font-family: 'Albert Sans', system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  .display {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-variation-settings: "opsz" 96;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+  }
+  .display-tight {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-variation-settings: "opsz" 64;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
+  }
+  .meta {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  ::selection { background: var(--teal); color: var(--ink); }
+
+  /* Paper grain */
+  .paper {
+    background-color: var(--bone);
+    background-image:
+      radial-gradient(rgba(242,237,228,0.045) 1px, transparent 1px),
+      radial-gradient(rgba(242,237,228,0.025) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+
+  .rule-ink    { border-color: rgba(242,237,228,0.18); }
+  .rule-teal   { border-color: var(--teal); }
+
+  /* Masthead rule */
+  .masthead-rule {
+    background: repeating-linear-gradient(to right, var(--ink) 0 8px, transparent 8px 12px);
+    height: 2px;
+  }
+
+  .portrait-wrap { position: relative; overflow: hidden; }
+  .portrait-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Issue badge */
+  .stamp {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1.5px solid var(--ink);
+    padding: 4px 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* Underline link */
+  a.u { position: relative; display: inline; background-image: linear-gradient(var(--ink), var(--ink)); background-repeat: no-repeat; background-size: 100% 1px; background-position: 0 100%; padding-bottom: 2px; transition: background-size 300ms ease, color 200ms ease; }
+  a.u:hover { color: var(--teal); background-image: linear-gradient(var(--teal), var(--teal)); background-size: 100% 2px; }
+
+  a.u-light { background-image: linear-gradient(var(--ink), var(--ink)); background-repeat: no-repeat; background-size: 100% 1px; background-position: 0 100%; padding-bottom: 2px; }
+  a.u-light:hover { color: var(--tealHi); background-image: linear-gradient(var(--tealHi), var(--tealHi)); background-size: 100% 2px; }
+
+  /* Page load reveals */
+  @keyframes rise { from { opacity:0; transform: translateY(18px);} to { opacity:1; transform:none;} }
+  @keyframes wipe { from { clip-path: inset(0 100% 0 0);} to { clip-path: inset(0 0 0 0);} }
+  @keyframes fade { from { opacity:0;} to { opacity:1;} }
+  .reveal    { opacity: 0; animation: rise 800ms cubic-bezier(0.2,0.8,0.2,1) forwards; }
+  .reveal-w  { clip-path: inset(0 100% 0 0); animation: wipe 1100ms cubic-bezier(0.7,0,0.2,1) forwards; }
+  .reveal-f  { opacity: 0; animation: fade 1400ms ease forwards; }
+  .d-1 { animation-delay: 100ms; } .d-2 { animation-delay: 240ms; } .d-3 { animation-delay: 400ms; }
+  .d-4 { animation-delay: 580ms; } .d-5 { animation-delay: 780ms; } .d-6 { animation-delay: 1000ms; }
+  .d-7 { animation-delay: 1240ms; }
+
+  /* Marquee */
+  @keyframes slide { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+  .marquee-track { display:flex; width: max-content; animation: slide 44s linear infinite; }
+
+  /* Big folio number */
+  .folio {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-variation-settings: "opsz" 96;
+    font-size: clamp(120px, 22vw, 360px);
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--ink);
+  }
+  .folio-teal { -webkit-text-stroke: 1.5px var(--teal); }
+  .folio-bone { -webkit-text-stroke: 1.5px var(--ink); }
+
+  /* Teal column block */
+  .teal-block {
+    background: var(--teal);
+    color: var(--ink);
+  }
+
+  /* Newspaper-style timeline row */
+  .row-line { border-top: 1px solid rgba(242,237,228,0.25); }
+
+  /* Big stat */
+  .stat-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-variation-settings: "opsz" 96;
+    font-size: clamp(64px, 9vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: var(--teal);
+  }
+
+  /* Dark section type */
+  .on-dark { color: var(--ink); }
+  .on-dark .display { color: var(--ink); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-w, .reveal-f { opacity: 1 !important; clip-path: none !important; animation: none !important; transform: none !important; }
+    .marquee-track { animation: none !important; }
+  }
+</style>
+</head>
+<body class="paper">
+
+<!-- ================= MASTHEAD ================= -->
+<header class="border-b-2 border-ink">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+    <!-- top bar -->
+    <div class="flex items-center justify-between py-3 meta text-ink/70">
+      <span>Glasgow, Scotland</span>
+      <span>contact@rorybrown.info</span>
+    </div>
+    <div class="masthead-rule"></div>
+    <!-- masthead -->
+    <div class="flex items-baseline justify-between py-6 gap-6 flex-wrap">
+      <a href="#top" class="display text-[44px] md:text-[72px] leading-none">Rory&nbsp;Brown</a>
+      <nav class="flex items-center gap-6 md:gap-10 meta">
+        <a href="#about"     class="u">About</a>
+        <a href="#composer"  class="u">Composer</a>
+        <a href="#vrcompare" class="u">VRcompare</a>
+        <a href="#work"      class="u">Work</a>
+        <a href="#contact"   class="u">Contact</a>
+      </nav>
+    </div>
+    <div class="masthead-rule"></div>
+    <div class="flex items-center justify-between py-2 meta text-ink/70">
+      <span>Tech Lead · LI.FI</span>
+      <span>Founder · VRcompare</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="relative">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10 pt-10 md:pt-16 pb-16 md:pb-24">
+
+    <!-- Hero grid -->
+    <div class="grid grid-cols-12 gap-4 md:gap-6 items-center">
+
+      <!-- LEFT column — kicker + body -->
+      <div class="col-span-12 lg:col-span-7 flex flex-col">
+        <div class="meta text-teal reveal-f d-2">Tech Lead, LI.FI &nbsp;·&nbsp; Founder, VRcompare</div>
+
+        <h1 class="display text-[8vw] md:text-[64px] lg:text-[76px] mt-4 reveal d-3">
+          <span class="text-teal">Web3 engineer</span> and <span class="text-teal">XR industry</span> founder
+        </h1>
+
+        <p class="mt-10 max-w-md text-[17px] leading-[1.55] text-ink/85 reveal d-4">
+          Building <span class="font-semibold">Composer</span> at LI.FI — one transaction for entire DeFi workflows. Cataloguing the XR hardware industry at <span class="font-semibold">VRcompare</span>. Glasgow, Scotland · working remotely.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-3 reveal d-5">
+          <a href="#composer" class="inline-flex items-center gap-2 bg-ink text-bone px-5 py-3 meta hover:bg-teal transition-colors">
+            → Read on Composer
+          </a>
+          <a href="#vrcompare" class="inline-flex items-center gap-2 border border-ink px-5 py-3 meta hover:bg-ink hover:text-bone transition-colors">
+            → VRcompare
+          </a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT column — portrait -->
+      <div class="col-span-12 lg:col-span-5 relative reveal-w d-3 flex justify-center lg:justify-end">
+        <div class="portrait-wrap aspect-[3/4] w-full max-w-xs md:max-w-sm border-2 border-ink">
+          <img src="img/headshot.JPG" alt="Rory Brown" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee ticker -->
+  <div class="border-y-2 border-ink bg-bone overflow-hidden">
+    <div class="marquee-track meta py-4 text-ink">
+      <div class="flex items-center whitespace-nowrap">
+        <span class="px-10">LI.FI Composer — shipped January 2026</span><span class="text-teal">◆</span>
+        <span class="px-10">20+ yield protocols · 20+ EVM chains</span><span class="text-teal">◆</span>
+        <span class="px-10">VRcompare · est. 2020</span><span class="text-teal">◆</span>
+        <span class="px-10">250+ devices · 100+ manufacturers · 150k+ monthly views</span><span class="text-teal">◆</span>
+      </div>
+      <div class="flex items-center whitespace-nowrap" aria-hidden="true">
+        <span class="px-10">LI.FI Composer — shipped January 2026</span><span class="text-teal">◆</span>
+        <span class="px-10">20+ yield protocols · 20+ EVM chains</span><span class="text-teal">◆</span>
+        <span class="px-10">VRcompare · est. 2020</span><span class="text-teal">◆</span>
+        <span class="px-10">250+ devices · 100+ manufacturers · 150k+ monthly views</span><span class="text-teal">◆</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36 grid grid-cols-12 gap-4 md:gap-8">
+    <div class="col-span-12 md:col-span-4">
+      <div class="folio folio-teal select-none">01</div>
+      <div class="meta text-teal mt-4">A Brief Introduction</div>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <h2 class="display-tight text-3xl md:text-5xl lg:text-[56px] max-w-[22ch]">
+        Eight years building software — infrastructure at LI.FI and an independent XR hardware database.
+      </h2>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-10 text-[16px] leading-[1.6] text-ink/85">
+        <p class="first-letter:display first-letter:text-[68px] first-letter:leading-[0.7] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-teal">
+          I lead engineering on Composer at LI.FI — a primitive that lets developers compose entire DeFi workflows into a single transaction. It's infrastructure work: routing, execution, and the systems that sit underneath the wallets, exchanges, and DeFi apps that use LI.FI to move value across chains.
+        </p>
+        <p>
+          Separately, I run VRcompare, the internet's largest database of VR and AR hardware. I designed, built, and have operated it since 2020 — an independent company and a comprehensive reference for the XR hardware industry. First Class BSc (Hons) in Computer Science, University of Strathclyde.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPOSER (DARK TEAL INVERSION) ================= -->
+<section id="composer" class="teal-block on-dark relative overflow-hidden" style="background: var(--tealDk);">
+  <!-- subtle diagonal lines -->
+  <div class="absolute inset-0 opacity-[0.08]" style="background-image: repeating-linear-gradient(-35deg, var(--ink) 0 1px, transparent 1px 24px);"></div>
+
+  <div class="relative max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
+
+    <!-- Top banner -->
+    <div class="flex items-center justify-between flex-wrap gap-4 pb-6 border-b border-ink/20">
+      <div class="flex items-center gap-4">
+        <div class="folio folio-bone select-none" style="font-size: 120px; line-height: 0.8;">02</div>
+        <div>
+          <div class="meta text-ink/70">Flagship feature</div>
+        </div>
+      </div>
+      <!-- LI.FI logo on teal surface, no box -->
+      <img src="img/logo_lifi_dark.svg" alt="LI.FI" class="h-8 md:h-10 w-auto" />
+    </div>
+
+    <!-- Huge hed -->
+    <h2 class="display mt-12 text-[14vw] md:text-[140px] lg:text-[180px]">
+      <span class="block">Composer</span>
+    </h2>
+
+    <!-- Two columns editorial -->
+    <div class="mt-16 grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-7 space-y-6 text-[17px] leading-[1.6] text-ink/85">
+        <p>
+          <span class="meta text-tealHi">LI.FI &nbsp;·&nbsp; 2024–Present &nbsp;·&nbsp; Remote</span>
+        </p>
+        <p>
+          LI.FI is a cross-chain liquidity and orchestration layer used by wallets, exchanges, and DeFi applications to move value across EVM chains, Solana, Sui, Bitcoin, and other non-EVM ecosystems.
+        </p>
+        <p>
+          I lead engineering on <span class="font-semibold text-ink">Composer</span>, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — <span class="text-tealHi">swap, bridge, deposit, stake</span> — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive.
+        </p>
+        <p>
+          <a href="https://jumper.xyz" target="_blank" rel="noreferrer" class="u-light">Live on jumper.xyz →</a>
+        </p>
+      </div>
+
+      <!-- Spec card -->
+      <div class="lg:col-span-5 border border-ink/20 p-8">
+        <div class="meta text-tealHi mb-6">Spec sheet</div>
+        <dl class="divide-y divide-ink/15">
+          <div class="flex items-baseline justify-between py-3">
+            <dt class="text-ink/70">Shipped</dt>
+            <dd class="font-mono">JAN 2026</dd>
+          </div>
+          <div class="flex items-baseline justify-between py-3">
+            <dt class="text-ink/70">Yield protocols</dt>
+            <dd class="font-mono text-tealHi">20+</dd>
+          </div>
+          <div class="flex items-baseline justify-between py-3">
+            <dt class="text-ink/70">EVM chains</dt>
+            <dd class="font-mono text-tealHi">20+</dd>
+          </div>
+          <div class="flex items-baseline justify-between py-3">
+            <dt class="text-ink/70">Execution</dt>
+            <dd class="font-mono">Atomic · 1 tx</dd>
+          </div>
+          <div class="flex items-baseline justify-between py-3">
+            <dt class="text-ink/70">Surface</dt>
+            <dd class="font-mono">jumper.xyz</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <!-- Flow diagram horizontal -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-5 border border-ink/20 divide-y md:divide-y-0 md:divide-x divide-ink/15">
+      <div class="p-6">
+        <div class="meta text-tealHi mb-3">Input</div>
+        <div class="font-mono text-sm">USDC · Base</div>
+      </div>
+      <div class="p-6 font-display text-xl text-ink">
+        <div class="meta text-ink/50 mb-2">01</div>
+        Swap
+      </div>
+      <div class="p-6 font-display text-xl text-ink">
+        <div class="meta text-ink/50 mb-2">02</div>
+        Bridge
+      </div>
+      <div class="p-6 font-display text-xl text-ink">
+        <div class="meta text-ink/50 mb-2">03</div>
+        Deposit
+      </div>
+      <div class="p-6 bg-tealHi text-tealDr">
+        <div class="meta mb-3">Output</div>
+        <div class="font-mono text-sm font-semibold">Vault · one tx</div>
+      </div>
+    </div>
+
+    <!-- Secondary projects -->
+    <div class="mt-20 grid md:grid-cols-2 gap-6">
+      <article class="border border-ink/20 p-8">
+        <div class="flex items-center justify-between mb-6">
+          <div class="meta text-tealHi">Sub-project · Mar 2025</div>
+        </div>
+        <h3 class="display-tight text-3xl mb-4">Sui integration</h3>
+        <p class="text-ink/80 text-[15px] leading-[1.6]">
+          Led LI.FI's expansion onto Sui: transaction generation plus swap and bridge coverage across a range of DEXs and bridges. First non-EVM Move-based chain supported by the platform.
+        </p>
+      </article>
+      <article class="border border-ink/20 p-8">
+        <div class="flex items-center justify-between mb-6">
+          <div class="meta text-tealHi">Sub-project · Jan 2025</div>
+        </div>
+        <h3 class="display-tight text-3xl mb-4">Ledger integration</h3>
+        <p class="text-ink/80 text-[15px] leading-[1.6]">
+          Bespoke swap and bridging integration embedded directly into the Ledger wallet companion app, built to Ledger's security and UX constraints.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VRCOMPARE ================= -->
+<section id="vrcompare" class="relative paper">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
+
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
+      <div class="flex items-baseline gap-6">
+        <div class="folio select-none">03</div>
+        <div>
+          <div class="meta text-ink/60">Parallel track</div>
+          <div class="meta text-teal">A founder story — since 2020</div>
+        </div>
+      </div>
+      <img src="img/logo_vrcompare.png" alt="VRcompare" class="h-8 w-auto" />
+    </div>
+
+    <h2 class="display text-[13vw] md:text-[120px] lg:text-[160px] mb-12">
+      VR<span class="text-teal">compare</span>
+    </h2>
+
+    <!-- Mockups floating directly on paper background, no container -->
+    <div class="relative my-12 md:my-20">
+      <div class="relative max-w-5xl mx-auto">
+        <img src="img/vrcompareDesktopMockup.png" alt="VRcompare on desktop" class="w-full h-auto" />
+        <img src="img/vrcompareMobileMockup.png" alt="VRcompare on mobile" class="absolute -bottom-10 right-0 md:right-8 w-[26%] h-auto" />
+      </div>
+    </div>
+
+    <!-- Body copy in two editorial columns -->
+    <div class="grid lg:grid-cols-12 gap-10 mt-20">
+      <div class="lg:col-span-7 space-y-6 text-[17px] leading-[1.65] text-ink/85">
+        <p>
+          VRcompare is the internet's largest database of VR and AR hardware. I designed, engineered, and deployed the platform from scratch — a full-stack React application with a bespoke CMS that serves detailed headset data to consumers, press, and businesses across the XR industry.
+        </p>
+        <p>
+          Sole engineer, designer, and operator. Product direction, feature development, and editorial — I decide what ships and personally curate every new headset added to the database. Commercial too: brand partnerships, sponsored content, and direct sales across the XR industry.
+        </p>
+        <p>
+          <a href="https://vrcompare.com" target="_blank" rel="noreferrer" class="u font-semibold">Visit vrcompare.com →</a>
+        </p>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <div class="stat-num">250<span class="text-teal/70 text-[0.4em] align-top">+</span></div>
+            <div class="meta text-ink/60 mt-2">Devices tracked</div>
+          </div>
+          <div>
+            <div class="stat-num">100<span class="text-teal/70 text-[0.4em] align-top">+</span></div>
+            <div class="meta text-ink/60 mt-2">Manufacturers</div>
+          </div>
+          <div>
+            <div class="stat-num">150<span class="text-teal/70 text-[0.4em] align-top">K</span></div>
+            <div class="meta text-ink/60 mt-2">Monthly views</div>
+          </div>
+          <div>
+            <div class="stat-num">05</div>
+            <div class="meta text-ink/60 mt-2">Years operating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pull quote -->
+    <figure class="mt-24 md:mt-32 max-w-5xl border-t-2 border-ink pt-12">
+      <blockquote class="display text-3xl md:text-5xl lg:text-6xl leading-[1.05]">
+        <span class="text-teal">“</span>One of the most informational websites for AR and VR — helping people all over the world.<span class="text-teal">”</span>
+      </blockquote>
+      <figcaption class="meta mt-6 text-ink/70">— Mark Cowles, VR-Expert &nbsp;·&nbsp; Partnered with VRcompare</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= TRAJECTORY / WORK ================= -->
+<section id="work" class="relative border-t-2 border-ink">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
+
+    <div class="grid md:grid-cols-12 gap-4 mb-12">
+      <div class="md:col-span-4">
+        <div class="folio folio-teal select-none">04</div>
+        <div class="meta text-teal mt-4">Work</div>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="display-tight text-4xl md:text-6xl">Experience</h2>
+      </div>
+    </div>
+
+    <ol class="mt-8">
+      <li class="row-line grid md:grid-cols-12 gap-6 py-7 items-baseline">
+        <div class="md:col-span-2 meta">2024 —</div>
+        <div class="md:col-span-6">
+          <h3 class="display-tight text-2xl md:text-3xl">Tech Lead — Composer</h3>
+          <p class="text-ink/70 mt-1">LI.FI · Remote · Current</p>
+        </div>
+        <div class="md:col-span-4 text-[15px] text-ink/75">Leading engineering on LI.FI's transaction orchestration engine. Previously led the Sui and Ledger integrations.</div>
+      </li>
+
+      <li class="row-line grid md:grid-cols-12 gap-6 py-7 items-baseline">
+        <div class="md:col-span-2 meta">2020 —</div>
+        <div class="md:col-span-6">
+          <h3 class="display-tight text-2xl md:text-3xl">Founder — VRcompare</h3>
+          <p class="text-ink/70 mt-1">Self-employed · Parallel</p>
+        </div>
+        <div class="md:col-span-4 text-[15px] text-ink/75">Designed, built, and operate the internet's largest XR hardware database.</div>
+      </li>
+
+      <li class="row-line grid md:grid-cols-12 gap-6 py-7 items-baseline">
+        <div class="md:col-span-2 meta">2023 — 24</div>
+        <div class="md:col-span-6">
+          <h3 class="display-tight text-2xl md:text-3xl">Chief Technology Officer</h3>
+          <p class="text-ink/70 mt-1">PropEco</p>
+        </div>
+        <div class="md:col-span-4 text-[15px] text-ink/75">Micro-SaaS property intelligence for the UK market — geospatial and public-record datasets at per-property resolution. Owned platform architecture, engineering, and infrastructure.</div>
+      </li>
+
+      <li class="row-line grid md:grid-cols-12 gap-6 py-7 items-baseline">
+        <div class="md:col-span-2 meta">2022 — 23</div>
+        <div class="md:col-span-6">
+          <h3 class="display-tight text-2xl md:text-3xl">Freelance Engineer</h3>
+          <p class="text-ink/70 mt-1">Independent</p>
+        </div>
+        <div class="md:col-span-4 text-[15px] text-ink/75">Full-stack web and mobile contract work across a range of clients.</div>
+      </li>
+
+      <li class="row-line grid md:grid-cols-12 gap-6 py-7 items-baseline">
+        <div class="md:col-span-2 meta">2021</div>
+        <div class="md:col-span-6">
+          <h3 class="display-tight text-2xl md:text-3xl">Software Engineer</h3>
+          <p class="text-ink/70 mt-1">Animated Insights</p>
+        </div>
+        <div class="md:col-span-4 text-[15px] text-ink/75">Frontend for a digital-twin building management platform — real-time 3D visualisation of internal building systems for granular operator control.</div>
+      </li>
+
+      <li class="row-line border-b border-ink/25 grid md:grid-cols-12 gap-6 py-7 items-baseline">
+        <div class="md:col-span-2 meta">2019 — 21</div>
+        <div class="md:col-span-6">
+          <h3 class="display-tight text-2xl md:text-3xl">Earlier</h3>
+          <p class="text-ink/70 mt-1">Foundations</p>
+        </div>
+        <div class="md:col-span-4 text-[15px] text-ink/75">Software Engineer Intern at JPMorgan Chase &amp; Co. (2020); Computer Science Tutor (2019–2021).</div>
+      </li>
+    </ol>
+
+    <!-- Education & Skills -->
+    <div class="mt-20 grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5">
+        <div class="meta text-ink/60 mb-3">Education</div>
+        <h3 class="display-tight text-3xl">BSc (Hons) Computer Science</h3>
+        <p class="text-ink/75 mt-2">University of Strathclyde · 2017 – 2021</p>
+        <p class="mt-4 text-teal">First Class Honours</p>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="meta text-ink/60 mb-5">Stack — categorised</div>
+        <div class="space-y-4 text-[15px]">
+          <div class="grid grid-cols-12 gap-4 border-t rule-ink pt-4">
+            <div class="col-span-4 meta text-teal">Languages</div>
+            <div class="col-span-8">TypeScript · Rust · Solidity · Java · C# · SQL</div>
+          </div>
+          <div class="grid grid-cols-12 gap-4 border-t rule-ink pt-4">
+            <div class="col-span-4 meta text-teal">Web3</div>
+            <div class="col-span-8">EVM · Viem · Ethers · Foundry · Sui / Move · smart contracts · cross-chain infra</div>
+          </div>
+          <div class="grid grid-cols-12 gap-4 border-t rule-ink pt-4">
+            <div class="col-span-4 meta text-teal">Backend & infra</div>
+            <div class="col-span-8">Node.js · Postgres · Prisma · MongoDB · Redis · NATS · BullMQ · Docker · AWS · REST · OpenAPI · Grafana · Sentry</div>
+          </div>
+          <div class="grid grid-cols-12 gap-4 border-t border-b rule-ink py-4">
+            <div class="col-span-4 meta text-teal">Frontend</div>
+            <div class="col-span-8">React · Next.js · React Native · Vite · Tailwind · GraphQL · React Query · Zustand · Vitest · Three.js · WebXR · Unity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="relative border-t-2 border-ink" style="background: var(--bone2);">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
+
+    <div class="flex items-end justify-between flex-wrap gap-4 mb-12">
+      <div>
+        <div class="folio folio-teal select-none">05</div>
+        <div class="meta text-teal mt-3">Contact</div>
+      </div>
+    </div>
+
+    <h2 class="display text-[14vw] md:text-[140px] lg:text-[180px] leading-[0.9]">
+      Get in<br/><span class="text-teal">touch</span>
+    </h2>
+
+    <div class="mt-16 grid md:grid-cols-2 gap-10">
+      <div>
+        <div class="meta text-ink/60 mb-3">Direct</div>
+        <a href="mailto:contact@rorybrown.info" class="display-tight text-2xl md:text-4xl u">contact@rorybrown.info</a>
+      </div>
+      <div>
+        <div class="meta text-ink/60 mb-3">Elsewhere</div>
+        <ul class="space-y-3 text-lg">
+          <li class="flex items-baseline justify-between border-b rule-ink pb-2">
+            <span class="meta">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/rory-brown-dev" target="_blank" rel="noreferrer" class="u">Rory Brown →</a>
+          </li>
+          <li class="flex items-baseline justify-between border-b rule-ink pb-2">
+            <span class="meta">GitHub</span>
+            <a href="https://github.com/rory660" target="_blank" rel="noreferrer" class="u">@rory660 →</a>
+          </li>
+          <li class="flex items-baseline justify-between border-b rule-ink pb-2">
+            <span class="meta">X</span>
+            <a href="https://x.com/rory660" target="_blank" rel="noreferrer" class="u">@rory660 →</a>
+          </li>
+          <li class="flex items-baseline justify-between border-b rule-ink pb-2">
+            <span class="meta">VRcompare</span>
+            <a href="https://vrcompare.com" target="_blank" rel="noreferrer" class="u">vrcompare.com →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Colophon -->
+  <div class="border-t-2 border-ink">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-6 flex flex-wrap items-center justify-between gap-4 meta text-ink/70">
+      <span>© 2026 · Rory Brown · Glasgow</span>
+      <span>Set in Bricolage Grotesque &amp; Albert Sans</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
