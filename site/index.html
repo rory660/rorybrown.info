@@ -275,17 +275,13 @@
 
 <!-- ================= ABOUT ================= -->
 <section id="about" class="relative">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36 grid grid-cols-12 gap-4 md:gap-8">
-    <div class="col-span-12 md:col-span-4">
-      <div class="folio folio-teal select-none">01</div>
-      <div class="meta text-teal mt-4">A Brief Introduction</div>
-    </div>
-    <div class="col-span-12 md:col-span-8">
-      <h2 class="display-tight text-3xl md:text-5xl lg:text-[56px] max-w-[22ch]">
-        Eight years building software — infrastructure at LI.FI and an independent XR hardware database.
-      </h2>
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
+    <div class="meta text-teal mb-5">A Brief Introduction</div>
+    <h2 class="display-tight text-3xl md:text-5xl lg:text-[56px] max-w-[22ch]">
+      Eight years building software — infrastructure at LI.FI and an independent XR hardware database.
+    </h2>
 
-      <div class="mt-12 grid md:grid-cols-2 gap-10 text-[16px] leading-[1.6] text-ink/85">
+    <div class="mt-12 grid md:grid-cols-2 gap-10 text-[16px] leading-[1.6] text-ink/85">
         <p class="first-letter:display first-letter:text-[68px] first-letter:leading-[0.7] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-teal">
           I lead engineering on Composer at LI.FI — a primitive that lets developers compose entire DeFi workflows into a single transaction. It's infrastructure work: routing, execution, and the systems that sit underneath the wallets, exchanges, and DeFi apps that use LI.FI to move value across chains.
         </p>
@@ -293,8 +289,6 @@
           Separately, I run VRcompare, the internet's largest database of VR and AR hardware. I designed, built, and have operated it since 2020 — an independent company and a comprehensive reference for the XR hardware industry. First Class BSc (Hons) in Computer Science, University of Strathclyde.
         </p>
       </div>
-
-    </div>
   </div>
 </section>
 
@@ -307,18 +301,14 @@
 
     <!-- Top banner -->
     <div class="flex items-center justify-between flex-wrap gap-4 pb-6 border-b border-ink/20">
-      <div class="flex items-center gap-4">
-        <div class="folio folio-bone select-none" style="font-size: 120px; line-height: 0.8;">02</div>
-        <div>
-          <div class="meta text-ink/70">Flagship feature</div>
-        </div>
-      </div>
+      <div class="meta text-ink/70">Flagship feature</div>
       <!-- LI.FI logo on teal surface, no box -->
       <img src="img/logo_lifi_dark.svg" alt="LI.FI" class="h-16 md:h-24 lg:h-28 w-auto" />
     </div>
 
     <!-- Huge hed -->
     <h2 class="display mt-12 text-[14vw] md:text-[140px] lg:text-[180px]">
+      <span class="block text-tealHi text-[0.35em] tracking-tight mb-2">LI.FI</span>
       <span class="block">Composer</span>
     </h2>
 
@@ -417,34 +407,47 @@
 
 <!-- ================= VRCOMPARE ================= -->
 <section id="vrcompare" class="relative paper">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-20 md:py-28">
 
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
-      <div class="flex items-baseline gap-6">
-        <div class="folio select-none">03</div>
-        <div>
-          <div class="meta text-ink/60">Parallel track</div>
-          <div class="meta text-teal">A founder story — since 2020</div>
-        </div>
-      </div>
+    <!-- Masthead kicker -->
+    <div class="mb-6">
+      <div class="meta text-ink/60">Parallel track</div>
+      <div class="meta text-teal">A founder story — since 2020</div>
     </div>
 
-    <h2 class="display text-[9vw] md:text-[80px] lg:text-[104px] mb-12 flex items-center gap-4 md:gap-6 flex-wrap" style="color: #F2FDFE;">
+    <h2 class="display text-[9vw] md:text-[80px] lg:text-[104px] flex items-center gap-4 md:gap-6 flex-wrap" style="color: #F2FDFE;">
       <img src="img/logo_vrcompare.png" alt="" class="h-[0.9em] w-auto" />
       <span>VRcompare</span>
     </h2>
 
-    <!-- Mockups floating directly on paper background, no container -->
-    <div class="relative my-12 md:my-20">
-      <div class="relative max-w-5xl mx-auto">
-        <img src="img/vrcompareDesktopMockup.png" alt="VRcompare on desktop" class="w-full h-auto" />
-        <img src="img/vrcompareMobileMockup.png" alt="VRcompare on mobile" class="absolute -bottom-10 right-0 md:right-8 w-[26%] h-auto" />
+    <!-- Stat strip — full-width horizontal band under heading -->
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 border-t-2 border-b border-ink/80 divide-y md:divide-y-0 md:divide-x divide-ink/20">
+      <div class="py-6 md:py-8 md:px-6">
+        <div class="stat-num" style="font-size: clamp(44px, 6vw, 92px);">250<span class="text-teal/70 text-[0.4em] align-top">+</span></div>
+        <div class="meta text-ink/60 mt-2">Devices tracked</div>
+      </div>
+      <div class="py-6 md:py-8 md:px-6">
+        <div class="stat-num" style="font-size: clamp(44px, 6vw, 92px);">100<span class="text-teal/70 text-[0.4em] align-top">+</span></div>
+        <div class="meta text-ink/60 mt-2">Manufacturers</div>
+      </div>
+      <div class="py-6 md:py-8 md:px-6">
+        <div class="stat-num" style="font-size: clamp(44px, 6vw, 92px);">150<span class="text-teal/70 text-[0.4em] align-top">K</span></div>
+        <div class="meta text-ink/60 mt-2">Monthly views</div>
+      </div>
+      <div class="py-6 md:py-8 md:px-6">
+        <div class="stat-num" style="font-size: clamp(44px, 6vw, 92px);">05</div>
+        <div class="meta text-ink/60 mt-2">Years operating</div>
       </div>
     </div>
 
-    <!-- Body copy in two editorial columns -->
-    <div class="grid lg:grid-cols-12 gap-10 mt-20">
-      <div class="lg:col-span-7 space-y-6 text-[17px] leading-[1.65] text-ink/85">
+    <!-- Main spread: mockup anchors left, copy runs right -->
+    <div class="mt-14 md:mt-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <div class="lg:col-span-7 relative">
+        <img src="img/vrcompareDesktopMockup.png" alt="VRcompare on desktop" class="w-full h-auto" />
+        <img src="img/vrcompareMobileMockup.png" alt="VRcompare on mobile" class="absolute -bottom-8 -right-4 md:-right-8 w-[28%] h-auto" />
+      </div>
+
+      <div class="lg:col-span-5 space-y-6 text-[17px] leading-[1.65] text-ink/85 lg:pt-4">
         <p>
           VRcompare is the internet's largest database of VR and AR hardware. I designed, engineered, and deployed the platform from scratch — a full-stack React application with a bespoke CMS that serves detailed headset data to consumers, press, and businesses across the XR industry.
         </p>
@@ -455,31 +458,10 @@
           <a href="https://vrcompare.com" target="_blank" rel="noreferrer" class="u font-semibold">Visit vrcompare.com →</a>
         </p>
       </div>
-
-      <div class="lg:col-span-5">
-        <div class="grid grid-cols-2 gap-8">
-          <div>
-            <div class="stat-num">250<span class="text-teal/70 text-[0.4em] align-top">+</span></div>
-            <div class="meta text-ink/60 mt-2">Devices tracked</div>
-          </div>
-          <div>
-            <div class="stat-num">100<span class="text-teal/70 text-[0.4em] align-top">+</span></div>
-            <div class="meta text-ink/60 mt-2">Manufacturers</div>
-          </div>
-          <div>
-            <div class="stat-num">150<span class="text-teal/70 text-[0.4em] align-top">K</span></div>
-            <div class="meta text-ink/60 mt-2">Monthly views</div>
-          </div>
-          <div>
-            <div class="stat-num">05</div>
-            <div class="meta text-ink/60 mt-2">Years operating</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Pull quote -->
-    <figure class="mt-24 md:mt-32 max-w-5xl border-t-2 border-ink pt-12">
+    <figure class="mt-20 md:mt-24 max-w-5xl border-t-2 border-ink pt-10">
       <blockquote class="display text-3xl md:text-5xl lg:text-6xl leading-[1.05]">
         <span class="text-teal">“</span>One of the most informational websites for AR and VR — helping people all over the world.<span class="text-teal">”</span>
       </blockquote>
@@ -492,14 +474,9 @@
 <section id="work" class="relative border-t-2 border-ink">
   <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
 
-    <div class="grid md:grid-cols-12 gap-4 mb-12">
-      <div class="md:col-span-4">
-        <div class="folio folio-teal select-none">04</div>
-        <div class="meta text-teal mt-4">Work</div>
-      </div>
-      <div class="md:col-span-8">
-        <h2 class="display-tight text-4xl md:text-6xl">Experience</h2>
-      </div>
+    <div class="mb-12">
+      <div class="meta text-teal mb-4">Work</div>
+      <h2 class="display-tight text-4xl md:text-6xl">Experience</h2>
     </div>
 
     <ol class="mt-8">
@@ -596,11 +573,8 @@
 <section id="contact" class="relative border-t-2 border-ink" style="background: var(--bone2);">
   <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
 
-    <div class="flex items-end justify-between flex-wrap gap-4 mb-12">
-      <div>
-        <div class="folio folio-teal select-none">05</div>
-        <div class="meta text-teal mt-3">Contact</div>
-      </div>
+    <div class="mb-12">
+      <div class="meta text-teal">Contact</div>
     </div>
 
     <h2 class="display text-[14vw] md:text-[140px] lg:text-[180px] leading-[0.9]">
