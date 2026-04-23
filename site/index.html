@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Albert+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Albert+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -172,6 +172,13 @@
   .on-dark { color: var(--ink); }
   .on-dark .display { color: var(--ink); }
 
+  /* VRcompare brand font */
+  #vrcompare, #vrcompare .display, #vrcompare .display-tight, #vrcompare .stat-num {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+  #vrcompare .display, #vrcompare .display-tight { font-weight: 700; letter-spacing: -0.02em; }
+  #vrcompare .stat-num { font-weight: 700; letter-spacing: -0.03em; }
+
   @media (prefers-reduced-motion: reduce) {
     .reveal, .reveal-w, .reveal-f { opacity: 1 !important; clip-path: none !important; animation: none !important; transform: none !important; }
     .marquee-track { animation: none !important; }
@@ -307,7 +314,7 @@
         </div>
       </div>
       <!-- LI.FI logo on teal surface, no box -->
-      <img src="img/logo_lifi_dark.svg" alt="LI.FI" class="h-8 md:h-10 w-auto" />
+      <img src="img/logo_lifi_dark.svg" alt="LI.FI" class="h-16 md:h-24 lg:h-28 w-auto" />
     </div>
 
     <!-- Huge hed -->
@@ -332,31 +339,31 @@
         </p>
       </div>
 
-      <!-- Spec card -->
-      <div class="lg:col-span-5 border border-ink/20 p-8">
+      <!-- Spec grid -->
+      <div class="lg:col-span-5">
         <div class="meta text-tealHi mb-6">Spec sheet</div>
-        <dl class="divide-y divide-ink/15">
-          <div class="flex items-baseline justify-between py-3">
-            <dt class="text-ink/70">Shipped</dt>
-            <dd class="font-mono">JAN 2026</dd>
+        <div class="grid grid-cols-2 gap-x-8 gap-y-10">
+          <div>
+            <div class="stat-num" style="color: var(--tealHi);">20<span class="text-ink/50 text-[0.4em] align-top">+</span></div>
+            <div class="meta text-ink/60 mt-2">Yield protocols</div>
           </div>
-          <div class="flex items-baseline justify-between py-3">
-            <dt class="text-ink/70">Yield protocols</dt>
-            <dd class="font-mono text-tealHi">20+</dd>
+          <div>
+            <div class="stat-num" style="color: var(--tealHi);">20<span class="text-ink/50 text-[0.4em] align-top">+</span></div>
+            <div class="meta text-ink/60 mt-2">EVM chains</div>
           </div>
-          <div class="flex items-baseline justify-between py-3">
-            <dt class="text-ink/70">EVM chains</dt>
-            <dd class="font-mono text-tealHi">20+</dd>
+          <div>
+            <div class="stat-num" style="color: var(--tealHi); font-size: clamp(36px, 5vw, 72px);">JAN<br/><span class="text-ink/90">2026</span></div>
+            <div class="meta text-ink/60 mt-2">Shipped</div>
           </div>
-          <div class="flex items-baseline justify-between py-3">
-            <dt class="text-ink/70">Execution</dt>
-            <dd class="font-mono">Atomic · 1 tx</dd>
+          <div>
+            <div class="stat-num" style="color: var(--tealHi); font-size: clamp(36px, 5vw, 72px);">1<span class="text-ink/50"> tx</span></div>
+            <div class="meta text-ink/60 mt-2">Atomic execution</div>
           </div>
-          <div class="flex items-baseline justify-between py-3">
-            <dt class="text-ink/70">Surface</dt>
-            <dd class="font-mono">jumper.xyz</dd>
+          <div class="col-span-2">
+            <div class="stat-num" style="color: var(--tealHi); font-size: clamp(36px, 5vw, 72px);">jumper<span class="text-ink/50">.xyz</span></div>
+            <div class="meta text-ink/60 mt-2">Surface</div>
           </div>
-        </dl>
+        </div>
       </div>
     </div>
 
@@ -420,11 +427,11 @@
           <div class="meta text-teal">A founder story — since 2020</div>
         </div>
       </div>
-      <img src="img/logo_vrcompare.png" alt="VRcompare" class="h-8 w-auto" />
     </div>
 
-    <h2 class="display text-[13vw] md:text-[120px] lg:text-[160px] mb-12">
-      VR<span class="text-teal">compare</span>
+    <h2 class="display text-[9vw] md:text-[80px] lg:text-[104px] mb-12 flex items-center gap-4 md:gap-6 flex-wrap" style="color: #F2FDFE;">
+      <img src="img/logo_vrcompare.png" alt="" class="h-[0.9em] w-auto" />
+      <span>VRcompare</span>
     </h2>
 
     <!-- Mockups floating directly on paper background, no container -->
