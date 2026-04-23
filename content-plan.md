@@ -118,4 +118,5 @@ Get in touch — send me an email.
 - Tone: confident engineer, not marketer. Avoid crypto-bro aesthetic; lean technical and clean.
 - Good candidates for visual treatment: a Composer flow diagram (swap → bridge → deposit as one tx), and a VRcompare headset grid.
 - Headshot available at `site/img/headshot.jpg` — use in the hero or About section.
+- VRcompare mockups available at `site/img/vrcompareDesktopMockup.png` and `site/img/vrcompareMobileMockup.png` — use in the VRcompare section as a product visual (e.g. paired desktop + mobile shot).
 - Old site (rorybrown.info) framed Rory as "Full Stack Web Developer / XR Industry Professional" — the updated framing is "Tech Lead / Founder" with LI.FI Composer as the flagship technical work and VRcompare as the parallel founder track.
