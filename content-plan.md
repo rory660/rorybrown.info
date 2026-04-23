@@ -11,16 +11,16 @@ Tech Lead, LI.FI · Founder, VRcompare
 
 Building Composer at LI.FI — one transaction for entire DeFi workflows. Cataloguing the XR hardware industry at VRcompare.
 
-Glasgow, Scotland · Remote
+Glasgow, Scotland · Working remotely
 contact@rorybrown.info
 
 ---
 
 ## About
 
-I lead engineering on **Composer** at LI.FI — a new primitive that lets developers compose entire DeFi workflows into a single transaction. It's infrastructure work: routing, execution, and the systems that sit underneath the wallets, exchanges, and DeFi apps that use LI.FI to move value across chains.
+I lead engineering on **Composer** at LI.FI — a primitive that lets developers compose entire DeFi workflows into a single transaction. It's infrastructure work: routing, execution, and the systems that sit underneath the wallets, exchanges, and DeFi apps that use LI.FI to move value across chains.
 
-Separately, I run **VRcompare**, the internet's largest database of VR and AR hardware. I designed, built, and have operated it since 2020 — it's an independent company, a product, and a five-year record of the XR hardware industry.
+Separately, I run **VRcompare**, the internet's largest database of VR and AR hardware. I designed, built, and have operated it since 2020 — an independent company and a comprehensive reference for the XR hardware industry.
 
 I've been programming since I was a teenager; it started with an IRC chat bot and hasn't stopped since. I hold a First Class BSc (Hons) in Computer Science from the University of Strathclyde and have eight years of experience across startups, enterprise, and independent work.
 
@@ -33,28 +33,28 @@ I've been programming since I was a teenager; it started with an IRC chat bot an
 
 LI.FI is a cross-chain liquidity and orchestration layer used by wallets, exchanges, and DeFi applications to move value across EVM chains, Solana, Sui, Bitcoin, and other non-EVM ecosystems.
 
-I lead engineering on **Composer**, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — swap, bridge, deposit, stake — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive. Shipped with 20+ integrations across DeFi yield protocols at launch.
+I lead engineering on **Composer**, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — swap, bridge, deposit, stake — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive.
+
+`20+ yield protocol integrations · 20+ EVM chains · shipped Jan 2026 · live on [jumper.xyz](https://jumper.xyz)`
 
 **Other projects at LI.FI:**
 - **Sui integration** *(shipped March 2025)* — Led LI.FI's expansion onto Sui: transaction generation plus swap and bridge coverage across a range of DEXs and bridges. First non-EVM Move-based chain supported by the platform.
 - **Ledger integration** *(shipped January 2025)* — Bespoke swap and bridging integration embedded directly into the Ledger wallet companion app, built to Ledger's security and UX constraints.
-
-*Stack: TypeScript, Rust, Solidity, EVM tooling, cross-chain infrastructure.*
 
 ---
 
 ### Founder — VRcompare
 **Self-employed · May 2020 – Present**
 
-VRcompare is the internet's largest database of VR and AR devices. I designed, engineered, and deployed the platform from scratch — a full-stack React application with a bespoke CMS that serves detailed headset data to consumers, press, and businesses across the XR industry.
+VRcompare is the internet's largest database of VR and AR hardware. I designed, engineered, and deployed the platform from scratch — a full-stack React application with a bespoke CMS that serves detailed headset data to consumers, press, and businesses across the XR industry.
 
 `250+ devices · 100+ manufacturers · 150k+ monthly views · since 2020`
 
 **What it is:**
-- Full specs, pricing, and reviews for 250+ VR and AR headsets — the most comprehensive hardware catalogue on the web.
+- Full specs, pricing, and reviews for every major VR and AR headset — the most comprehensive hardware catalogue on the web.
 - A side-by-side compare tool used by consumers, press, and businesses researching headset purchases.
-- A directory of 100+ manufacturers shipping or developing XR hardware.
-- ~150k+ monthly page views. Partnered with VR-Expert; briefly featured on Linus Tech Tips.
+- A directory of manufacturers shipping or developing XR hardware.
+- Partnered with VR-Expert; briefly featured on Linus Tech Tips.
 
 **My role:**
 - Sole engineer, designer, and operator — the platform, CMS, and infrastructure are all built and maintained by me.
@@ -101,6 +101,8 @@ University of Strathclyde, 2017 – 2021
 
 ## Contact
 
+Get in touch — send me an email.
+
 - Email — contact@rorybrown.info
 - LinkedIn — Rory Brown
 - GitHub — [@rory660](https://github.com/rory660)
@@ -116,4 +118,4 @@ University of Strathclyde, 2017 – 2021
 - Tone: confident engineer, not marketer. Avoid crypto-bro aesthetic; lean technical and clean.
 - Good candidates for visual treatment: a Composer flow diagram (swap → bridge → deposit as one tx), and a VRcompare headset grid.
 - Headshot available at `site/img/headshot.jpg` — use in the hero or About section.
-- Old site (rorybrown.info) framed Rory as "Full Stack Web Developer / XR Industry Professional" — the updated framing should be "Senior Engineer / Tech Lead" with XR as the parallel founder track.
+- Old site (rorybrown.info) framed Rory as "Full Stack Web Developer / XR Industry Professional" — the updated framing is "Tech Lead / Founder" with LI.FI Composer as the flagship technical work and VRcompare as the parallel founder track.
