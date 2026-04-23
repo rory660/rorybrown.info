@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Albert+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Albert+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -172,6 +172,27 @@
   .on-dark { color: var(--ink); }
   .on-dark .display { color: var(--ink); }
 
+  /* Composer / LI.FI accent — brand pink + LI.FI-inspired type */
+  #composer {
+    --accent: #F7C2FF;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  #composer .display,
+  #composer .display-tight {
+    font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+    font-variation-settings: normal;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+  }
+  #composer .meta,
+  #composer .font-mono {
+    font-family: 'Roboto Mono', ui-monospace, monospace;
+    letter-spacing: 0.06em;
+  }
+  #composer .text-tealHi { color: var(--accent) !important; }
+  #composer .bg-tealHi { background-color: var(--accent) !important; }
+  #composer a.u-light:hover { color: var(--accent) !important; background-image: linear-gradient(var(--accent), var(--accent)) !important; }
+
   /* VRcompare brand font */
   #vrcompare, #vrcompare .display, #vrcompare .display-tight, #vrcompare .stat-num {
     font-family: 'Poppins', system-ui, sans-serif;
@@ -206,11 +227,6 @@
         <a href="#work"      class="u">Work</a>
         <a href="#contact"   class="u">Contact</a>
       </nav>
-    </div>
-    <div class="masthead-rule"></div>
-    <div class="flex items-center justify-between py-2 meta text-ink/70">
-      <span>Tech Lead · LI.FI</span>
-      <span>Founder · VRcompare</span>
     </div>
   </div>
 </header>
@@ -293,9 +309,9 @@
 </section>
 
 <!-- ================= COMPOSER (DARK TEAL INVERSION) ================= -->
-<section id="composer" class="teal-block on-dark relative overflow-hidden" style="background: var(--tealDk);">
+<section id="composer" class="teal-block on-dark relative overflow-hidden" style="background: #14191C;">
   <!-- subtle diagonal lines -->
-  <div class="absolute inset-0 opacity-[0.08]" style="background-image: repeating-linear-gradient(-35deg, var(--ink) 0 1px, transparent 1px 24px);"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background-image: repeating-linear-gradient(-35deg, rgba(247,194,255,0.10) 0 1px, transparent 1px 24px);"></div>
 
   <div class="relative max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-36">
 
@@ -325,7 +341,7 @@
           I lead engineering on <span class="font-semibold text-ink">Composer</span>, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — <span class="text-tealHi">swap, bridge, deposit, stake</span> — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive.
         </p>
         <p>
-          <a href="https://jumper.xyz" target="_blank" rel="noreferrer" class="u-light">Live on jumper.xyz →</a>
+          <a href="https://jumper.xyz" target="_blank" rel="noreferrer" class="u-light display-tight text-2xl md:text-4xl">Live on jumper.xyz →</a>
         </p>
       </div>
 
@@ -334,24 +350,20 @@
         <div class="meta text-tealHi mb-6">Spec sheet</div>
         <div class="grid grid-cols-2 gap-x-8 gap-y-10">
           <div>
-            <div class="stat-num" style="color: var(--tealHi);">20<span class="text-ink/50 text-[0.4em] align-top">+</span></div>
+            <div class="stat-num" style="color: #F7C2FF;">20<span class="text-ink/50 text-[0.4em] align-top">+</span></div>
             <div class="meta text-ink/60 mt-2">Yield protocols</div>
           </div>
           <div>
-            <div class="stat-num" style="color: var(--tealHi);">20<span class="text-ink/50 text-[0.4em] align-top">+</span></div>
+            <div class="stat-num" style="color: #F7C2FF;">20<span class="text-ink/50 text-[0.4em] align-top">+</span></div>
             <div class="meta text-ink/60 mt-2">EVM chains</div>
           </div>
           <div>
-            <div class="stat-num" style="color: var(--tealHi); font-size: clamp(36px, 5vw, 72px);">JAN<br/><span class="text-ink/90">2026</span></div>
+            <div class="stat-num" style="color: #F7C2FF; font-size: clamp(36px, 5vw, 72px);">JAN<br/><span class="text-ink/90">2026</span></div>
             <div class="meta text-ink/60 mt-2">Shipped</div>
           </div>
           <div>
-            <div class="stat-num" style="color: var(--tealHi); font-size: clamp(36px, 5vw, 72px);">1<span class="text-ink/50"> tx</span></div>
+            <div class="stat-num" style="color: #F7C2FF; font-size: clamp(36px, 5vw, 72px);">1<span class="text-ink/50"> tx</span></div>
             <div class="meta text-ink/60 mt-2">Atomic execution</div>
-          </div>
-          <div class="col-span-2">
-            <div class="stat-num" style="color: var(--tealHi); font-size: clamp(36px, 5vw, 72px);">jumper<span class="text-ink/50">.xyz</span></div>
-            <div class="meta text-ink/60 mt-2">Surface</div>
           </div>
         </div>
       </div>
@@ -455,7 +467,7 @@
           Sole engineer, designer, and operator. Product direction, feature development, and editorial — I decide what ships and personally curate every new headset added to the database. Commercial too: brand partnerships, sponsored content, and direct sales across the XR industry.
         </p>
         <p>
-          <a href="https://vrcompare.com" target="_blank" rel="noreferrer" class="u font-semibold">Visit vrcompare.com →</a>
+          <a href="https://vr-compare.com" target="_blank" rel="noreferrer" class="u font-semibold display-tight text-xl md:text-3xl">Visit vr-compare.com →</a>
         </p>
       </div>
     </div>
@@ -603,7 +615,7 @@
           </li>
           <li class="flex items-baseline justify-between border-b rule-ink pb-2">
             <span class="meta">VRcompare</span>
-            <a href="https://vrcompare.com" target="_blank" rel="noreferrer" class="u">vrcompare.com →</a>
+            <a href="https://vr-compare.com" target="_blank" rel="noreferrer" class="u">vr-compare.com →</a>
           </li>
         </ul>
       </div>
