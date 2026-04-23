@@ -33,7 +33,7 @@ I've been programming since I was a teenager; it started with an IRC chat bot an
 
 LI.FI is a cross-chain liquidity and orchestration layer used by wallets, exchanges, and DeFi applications to move value across EVM chains, Solana, Sui, Bitcoin, and other non-EVM ecosystems.
 
-I lead engineering on **Composer**, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — swap, bridge, deposit, stake — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive.
+I lead engineering on **Composer**, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — swap, bridge, deposit, stake — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive. Shipped with 20+ integrations across DeFi yield protocols at launch.
 
 **Other projects at LI.FI:**
 - **Sui integration** *(shipped March 2025)* — Led LI.FI's expansion onto Sui: transaction generation plus swap and bridge coverage across a range of DEXs and bridges. First non-EVM Move-based chain supported by the platform.
@@ -48,6 +48,8 @@ I lead engineering on **Composer**, which shipped in January 2026. It's a script
 
 VRcompare is the internet's largest database of VR and AR devices. I designed, engineered, and deployed the platform from scratch — a full-stack React application with a bespoke CMS that serves detailed headset data to consumers, press, and businesses across the XR industry.
 
+`250+ devices · 100+ manufacturers · 150k+ monthly views · since 2020`
+
 **What it is:**
 - Full specs, pricing, and reviews for 250+ VR and AR headsets — the most comprehensive hardware catalogue on the web.
 - A side-by-side compare tool used by consumers, press, and businesses researching headset purchases.
@@ -60,6 +62,9 @@ VRcompare is the internet's largest database of VR and AR devices. I designed, e
 - Commercial — brand partnerships, sponsored content, and direct sales across the XR industry.
 
 → vrcompare.com
+
+> "One of the most informational websites for AR and VR — helping people all over the world."
+> — Mark Cowles, VR-Expert
 
 ---
 
@@ -100,6 +105,7 @@ University of Strathclyde, 2017 – 2021
 - LinkedIn — Rory Brown
 - GitHub — [@rory660](https://github.com/rory660)
 - X — [@rory660](https://x.com/rory660)
+- Résumé — *(PDF, to be added)*
 
 ---
 
@@ -109,4 +115,5 @@ University of Strathclyde, 2017 – 2021
 - Composer is the headline. Pull-quote material should come from the Composer paragraph itself (e.g. "a single atomic transaction across chains") rather than borrowed launch copy.
 - Tone: confident engineer, not marketer. Avoid crypto-bro aesthetic; lean technical and clean.
 - Good candidates for visual treatment: a Composer flow diagram (swap → bridge → deposit as one tx), and a VRcompare headset grid.
+- Headshot available at `site/img/headshot.jpg` — use in the hero or About section.
 - Old site (rorybrown.info) framed Rory as "Full Stack Web Developer / XR Industry Professional" — the updated framing should be "Senior Engineer / Tech Lead" with XR as the parallel founder track.
