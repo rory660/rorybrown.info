@@ -22,7 +22,7 @@ I lead engineering on **Composer** at LI.FI — a primitive that lets developers
 
 Separately, I run **VRcompare**, the internet's largest database of VR and AR hardware. I designed, built, and have operated it since 2020 — an independent company and a comprehensive reference for the XR hardware industry.
 
-I've been programming since I was a teenager; it started with an IRC chat bot and hasn't stopped since. I hold a First Class BSc (Hons) in Computer Science from the University of Strathclyde and have eight years of experience across startups, enterprise, and independent work.
+I hold a First Class BSc (Hons) in Computer Science from the University of Strathclyde and have eight years of professional experience across startups, enterprise, and independent work.
 
 ---
 
@@ -114,8 +114,11 @@ Get in touch — send me an email.
 ## Design Notes (for the site concept, not for display)
 
 - Two pillars: **LI.FI Composer** (the serious, technical, current work) and **VRcompare** (the long-running founder story). The site should let a visitor land on either one within a click.
-- Composer is the headline. Pull-quote material should come from the Composer paragraph itself (e.g. "a single atomic transaction across chains") rather than borrowed launch copy.
+- Composer is the headline. Pull-quote material should come from the Composer paragraph itself (e.g. "a single atomic transaction") rather than borrowed launch copy.
 - Tone: confident engineer, not marketer. Avoid crypto-bro aesthetic; lean technical and clean.
+- Typography: use a sans-serif font throughout. Avoid thin/light weights — stick to regular, medium, and bold strokes for legibility and presence.
+- Colour scheme: build the palette around `#227286` (deep teal) as the primary accent. Derive supporting tones from it — darker shades for backgrounds, lighter/desaturated tints for surfaces, a neutral off-white for body text background, and a warm or near-white for foreground text. Keep accents restrained; let the teal carry the identity.
+- Do **not** present Composer as cross-chain in the design. "Atomic" is the right framing; "cross-chain" is not — Composer executes atomically on a single EVM chain. Keep cross-chain framing for LI.FI the platform, not for Composer itself.
 - Good candidates for visual treatment: a Composer flow diagram (swap → bridge → deposit as one tx), and a VRcompare headset grid.
 - Headshot available at `site/img/headshot.jpg` — use in the hero or About section.
 - VRcompare mockups available at `site/img/vrcompareDesktopMockup.png` and `site/img/vrcompareMobileMockup.png` — use in the VRcompare section as a product visual (e.g. paired desktop + mobile shot).
