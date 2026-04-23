@@ -7,9 +7,9 @@ Content brief for an updated personal site for **Rory Brown**. Focus: LI.FI Comp
 ## Hero
 
 **Rory Brown**
-Senior Software Engineer · Tech Lead, LI.FI Composer · Founder, VRcompare
+Tech Lead, LI.FI · Founder, VRcompare
 
-Building infrastructure that moves value across chains, and the internet's largest database of XR hardware.
+Building Composer at LI.FI — one transaction for entire DeFi workflows. Cataloguing the XR hardware industry at VRcompare.
 
 Glasgow, Scotland · Remote
 contact@rorybrown.info
@@ -18,11 +18,11 @@ contact@rorybrown.info
 
 ## About
 
-I'm a senior software engineer working at the intersection of web3 infrastructure and consumer-facing product. I've been programming since I was a teenager — it started with an IRC chat bot and hasn't stopped since.
+I lead engineering on **Composer** at LI.FI — a new primitive that lets developers compose entire DeFi workflows into a single transaction. It's infrastructure work: routing, execution, and the systems that sit underneath the wallets, exchanges, and DeFi apps that use LI.FI to move value across chains.
 
-Today I lead engineering on **Composer** at LI.FI, a transaction orchestration primitive that lets developers compose entire DeFi workflows into a single transaction. Alongside that, I run **VRcompare**, the internet's largest database of VR and AR devices, which I've designed, built and operated since 2020.
+Separately, I run **VRcompare**, the internet's largest database of VR and AR hardware. I designed, built, and have operated it since 2020 — it's an independent company, a product, and a five-year record of the XR hardware industry.
 
-I have a First Class BSc (Hons) in Computer Science from the University of Strathclyde and roughly a decade of experience across startups, enterprise, and independent work.
+I've been programming since I was a teenager; it started with an IRC chat bot and hasn't stopped since. I hold a First Class BSc (Hons) in Computer Science from the University of Strathclyde and have close to a decade of experience across startups, enterprise, and independent work.
 
 ---
 
@@ -33,7 +33,7 @@ I have a First Class BSc (Hons) in Computer Science from the University of Strat
 
 LI.FI is a cross-chain liquidity and orchestration layer used by wallets, exchanges, and DeFi applications to move value across EVM chains, Solana, Bitcoin, and alt-VMs.
 
-I currently lead engineering on **Composer**, LI.FI's new transaction orchestration primitive (launched Jan 2026). Composer lets developers compose multi-step, multi-chain DeFi workflows — swaps, bridging, deposits, staking — and execute them as a single transaction. It powers use cases like one-click cross-chain vault deposits, liquidity migrations, and bridge-and-stake flows, all with fewer confirmations and lower gas overhead.
+I lead engineering on **Composer**, which shipped in January 2026. It's a scriptable EVM execution engine that lets developers bundle multi-step, arbitrary DeFi flows — swap, bridge, deposit, stake — into a single atomic transaction. One-click vault deposits, liquidity migrations, and bridge-and-stake flows, all built on the same reusable primitive.
 
 > "One click to move value. One click to do anything in the DeFi ecosystem."
 
